@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>96AE222F12BD0BA7007AE77B</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Facebook.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>96AE223012BD0BA7007AE77B</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Facebook.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>96AE225112BD0EA4007AE77B</string>
-						<key>history</key>
-						<array>
-							<string>96AE222912BD0B74007AE77B</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1259, 802}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>112 138 1259 843 0 0 1680 1028 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -379,7 +338,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>96AE225012BD0EA4007AE77B</string>
+										<string>96AE225B12BD1011007AE77B</string>
 										<key>history</key>
 										<array>
 											<string>96ABA4FC12BCEACB007FF3A5</string>
@@ -594,10 +553,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>96AE225C12BD1011007AE77B</string>
+		<string>96AE225D12BD1011007AE77B</string>
 		<string>96AE211312BD00C2007AE77B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>96ABA44412BCC1A0007FF3A5</string>
-		<string>96AE222F12BD0BA7007AE77B</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/codecamp/Documents/CleanCity/cleancity-ios/CleanCity.xcodeproj</string>
 	</array>
