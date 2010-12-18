@@ -175,10 +175,7 @@
 		02BA90AB12BCBC1C00D1819D /* external */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				02BA917D12BCCDBF00D1819D /* JSON */,
->>>>>>> First Version of CCIncident
 				02BA912B12BCBC7D00D1819D /* Reachability */,
 				02BA90AC12BCBC1C00D1819D /* asi-http */,
 			);
@@ -222,8 +219,6 @@
 			sourceTree = "<group>";
 		};
 		02BA912B12BCBC7D00D1819D /* Reachability */ = {
-<<<<<<< HEAD
-=======
 			isa = PBXGroup;
 			children = (
 				02BA912C12BCBC7D00D1819D /* Reachability.h */,
@@ -233,7 +228,6 @@
 			sourceTree = "<group>";
 		};
 		02BA917D12BCCDBF00D1819D /* JSON */ = {
->>>>>>> First Version of CCIncident
 			isa = PBXGroup;
 			children = (
 				02BA917E12BCCDBF00D1819D /* JSON.h */,
@@ -406,15 +400,12 @@
 				02BA910412BCBC1C00D1819D /* ASIInputStream.m in Sources */,
 				02BA910512BCBC1C00D1819D /* ASINetworkQueue.m in Sources */,
 				02BA912E12BCBC7D00D1819D /* Reachability.m in Sources */,
-<<<<<<< HEAD
 				96ABA46412BCC444007FF3A5 /* CCPostView.m in Sources */,
-=======
 				02BA918912BCCDBF00D1819D /* NSObject+SBJSON.m in Sources */,
 				02BA918A12BCCDBF00D1819D /* NSString+SBJSON.m in Sources */,
 				02BA918B12BCCDBF00D1819D /* SBJsonBase.m in Sources */,
 				02BA918C12BCCDBF00D1819D /* SBJsonParser.m in Sources */,
 				02BA918D12BCCDBF00D1819D /* SBJsonWriter.m in Sources */,
->>>>>>> First Version of CCIncident
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +423,7 @@
 				GCC_PREFIX_HEADER = CleanCity_Prefix.pch;
 				INFOPLIST_FILE = "CleanCity-Info.plist";
 				PRODUCT_NAME = CleanCity;
-				SDKROOT = iphonesimulator4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};

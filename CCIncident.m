@@ -12,7 +12,7 @@
 
 #import "CCDebugMacros.h"
 
-#define kWebServiceUrl @""
+#define kWebServiceUrl @"http://cleancity.dyndns.org/1/incident_reports"
 
 @interface CCIncident()
 
