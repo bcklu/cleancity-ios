@@ -35,7 +35,7 @@
 	Facebook *facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
 	[facebook handleOpenURL:url];
 	[[NSUserDefaults standardUserDefaults] setObject:facebook.accessToken forKey:@"accesstoken"];
-		CCLOG(@"Got Token: %@", facebook.accessToken);
+	CCLOG(@"Got Token: %@", facebook.accessToken);
 	[facebook release];
 	return YES;
 }

@@ -7,14 +7,13 @@
 //
 
 #import "CCIncident.h"
+#import "CCDebugMacros.h"
+#import "CCDefinedConstants.h"
+
 #import "JSON.h"
+
 #import "NSData+Base64.h"
 #import "UIImage+Extras.h"
-
-#import "CCDebugMacros.h"
-
-#define kWebServiceUrl @"http://cleancity.dyndns.org/1/incident_reports"
-#define kImageTargetSize CGSizeMake(640.0f, 480.0f)
 
 @interface CCIncident()
 
@@ -41,24 +40,31 @@
 	
 	self.callback = cb;	
 	[self.callback startProgress:[NSNumber numberWithInt:1]];
+	 
+	NSString* userId = [[NSUserDefaults standardUserDefaults] stringForKey:@"accesstoken"];
 	
-	NSData *imageData = UIImageJPEGRepresentation([self.image imageByScalingProportionallyToSize:kImageTargetSize], 0.8f);	
-	NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys: [imageData base64EncodingWithLineLength:76], @"image", self.text, @"description", [NSNumber numberWithDouble:self.latitude], @"latitude", [NSNumber numberWithDouble:self.longitude], @"longitude", @"", @"author_id", nil];	
-	NSDictionary *incident_report = [NSDictionary dictionaryWithObjectsAndKeys:incident, @"incident_report", nil];	
-	
-	NSString *jsonRequest = [incident_report JSONRepresentation];	
-//	CCLOG(@"jsonRequest is %@", jsonRequest);
-	
-	NSMutableURLRequest *request = 	[NSMutableURLRequest requestWithURL:[NSURL URLWithString:kWebServiceUrl]];	
-	NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
-	
-	[request setHTTPMethod:@"POST"];
-	[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-	[request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
-	[request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
-	[request setHTTPBody:requestData];
-	
-	[self performSelectorInBackground:@selector(sendRequest:) withObject:request];
+	if(userId) {
+		UIImage *scaledImage = [self.image imageByScalingProportionallyToSize:kImageTargetSize];
+		NSData *imageData = UIImageJPEGRepresentation(scaledImage, 0.8f);	
+		NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys: [imageData base64EncodingWithLineLength:0], @"image", self.text, @"description", [NSNumber numberWithDouble:self.latitude], @"latitude", [NSNumber numberWithDouble:self.longitude], @"longitude", ((userId) ? userId : @""), @"author_id", nil];	
+		NSDictionary *incident_report = [NSDictionary dictionaryWithObjectsAndKeys:incident, @"incident_report", nil];	
+		
+		NSString *jsonRequest = [incident_report JSONRepresentation];
+		
+		NSMutableURLRequest *request = 	[NSMutableURLRequest requestWithURL:[NSURL URLWithString:kWebServiceUrl]];	
+		NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
+		
+		[request setHTTPMethod:@"POST"];
+		[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+		[request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+		[request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+		[request setHTTPBody:requestData];
+		
+		[self performSelectorInBackground:@selector(sendRequest:) withObject:request];
+	}
+	else {
+		CCLOGERR(@"Error. User not authenticated!");
+	}
 }
 
 - (void)sendRequest:(NSURLRequest*)req {
