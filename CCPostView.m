@@ -70,8 +70,10 @@
 
 - (IBAction) post {
 	
-		// Send
-	
+	if (pickedImage) {
+		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
+		[incident send:nil];
+	}
 }
 
 - (IBAction) showImageSourceChooser {
