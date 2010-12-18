@@ -85,6 +85,7 @@
 	
 	if (pickedImage) {
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
+		CCLOG(@"incident: %@",incident);
 		[incident send:nil];
 		[incident release];
 	} else {
@@ -143,6 +144,7 @@
 	
 	[self dismissModalViewControllerAnimated:YES];
 	CCLOG(@"Selected Image");
+
 }
 
 #pragma mark CLLocationManagerDelegate

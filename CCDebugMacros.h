@@ -13,5 +13,5 @@
 	## __VA_ARGS__]);
 #endif
 
-#define CCLOGERR(format, ...) { NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); [MMErrorLog logErrorInFunction:(char*)__PRETTY_FUNCTION__ atLine:__LINE__ withFormat:(format),##__VA_ARGS__]; }
+#define CCLOGERR(format, ...) { NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); }
 

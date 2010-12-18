@@ -10,20 +10,20 @@
 #import "CCProgressCallbackProtocol.h"
 
 @interface CCIncident : NSObject {
-	NSString* description;
+	NSString* text;
 	NSString* user;
 	UIImage* image;
-	double lat;
-	double lon;	
+	double latitude;
+	double longitude;	
 	
 	NSObject<CCProgressCallbackProtocol>* callback;
 }
 
-@property (retain,nonatomic) NSString* description;
+@property (retain,nonatomic) NSString* text;
 @property (readonly) NSString* user;
 @property (retain,nonatomic) UIImage* image;
-@property () double lat;
-@property () double lon;
+@property (assign) double latitude;
+@property (assign) double longitude;
 
 - (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)latitude andLon:(double)longitude;
 - (void)send:(NSObject<CCProgressCallbackProtocol>*)callback;
