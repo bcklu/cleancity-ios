@@ -33,6 +33,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		96ABA46412BCC444007FF3A5 /* CCPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */; };
 		96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA46312BCC444007FF3A5 /* CCPostView.xib */; };
+		96ABA4B812BCCFBD007FF3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ABA4B712BCCFBD007FF3A5 /* CoreLocation.framework */; };
+		96ABA4F812BCE9B6007FF3A5 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA4F712BCE9B6007FF3A5 /* 86-camera.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		96ABA46112BCC444007FF3A5 /* CCPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPostView.h; sourceTree = "<group>"; };
 		96ABA46212BCC444007FF3A5 /* CCPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPostView.m; sourceTree = "<group>"; };
 		96ABA46312BCC444007FF3A5 /* CCPostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCPostView.xib; sourceTree = "<group>"; };
+		96ABA4B712BCCFBD007FF3A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = iphoneos/System/Library/Frameworks/CoreLocation.framework; sourceTree = "<group>"; };
+		96ABA4F712BCE9B6007FF3A5 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				02BA913F12BCBCE700D1819D /* SystemConfiguration.framework in Frameworks */,
 				02BA914112BCBCF400D1819D /* MobileCoreServices.framework in Frameworks */,
 				02BA914512BCBD1900D1819D /* libz.1.2.3.dylib in Frameworks */,
+				96ABA4B812BCCFBD007FF3A5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +243,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				96ABA4F712BCE9B6007FF3A5 /* 86-camera.png */,
 				8D1107310486CEB800E47090 /* CleanCity-Info.plist */,
 			);
 			name = Shared;
@@ -270,6 +276,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96ABA4B712BCCFBD007FF3A5 /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -337,6 +344,7 @@
 				2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */,
 				02BA912212BCBC1C00D1819D /* README.textile in Resources */,
 				96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */,
+				96ABA4F812BCE9B6007FF3A5 /* 86-camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

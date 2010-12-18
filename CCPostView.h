@@ -7,15 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 
-@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate> {
 	
 	IBOutlet UITextView *comment;
 
 	UIActionSheet *imageSourceChooser;
 	UIImagePickerController *imagePicker;
 	UIImage *pickedImage;
+	
+	CLLocationManager *locationManager;
+	CLLocation *location;
 }
 
 - (IBAction) cancel;

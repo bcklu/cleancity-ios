@@ -26,6 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[comment becomeFirstResponder];
+	
+	locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = self;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	[locationManager startUpdatingLocation];
 }
 
 
@@ -79,10 +84,7 @@
 		} else {
 					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), nil];
 		}
-
-
 	}
-	
 	
 	[imageSourceChooser showInView:self.view];
 }
@@ -110,6 +112,15 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	pickedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
+}
+
+#pragma mark CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+	[location release];
+	location = [newLocation retain];
+	[imagePicker popViewControllerAnimated:YES];
+	CCLOG(@"Got location %@", location);
 }
 
 @end
