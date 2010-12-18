@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface UIImage (Extras)
-	- (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;
+- (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;
 @end

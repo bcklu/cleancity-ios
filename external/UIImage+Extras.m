@@ -8,7 +8,6 @@
 
 #import "UIImage+Extras.h"
 
-
 @implementation UIImage (Extras)
 
 - (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize {
