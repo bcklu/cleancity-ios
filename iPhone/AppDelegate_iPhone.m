@@ -9,6 +9,7 @@
 #import "AppDelegate_iPhone.h"
 #import "CCDebugMacros.h"
 #import "CCPostView.h"
+#import "FBConnect.h"
 
 @implementation AppDelegate_iPhone
 
@@ -25,12 +26,19 @@
 	CCPostView *postView = [[CCPostView alloc] init];
 	postView.view.frame = CGRectMake(0, 20, 320, 460);
 	[self.window addSubview:postView.view];
-	[postView release];
-	 
 	 
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	Facebook *facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
+	[facebook handleOpenURL:url];
+	[[NSUserDefaults standardUserDefaults] setObject:facebook.accessToken forKey:@"accesstoken"];
+		CCLOG(@"Got Token: %@", facebook.accessToken);
+	[facebook release];
+	return YES;
 }
 
 

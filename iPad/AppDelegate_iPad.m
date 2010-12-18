@@ -8,6 +8,7 @@
 
 #import "AppDelegate_iPad.h"
 #import "CCDebugMacros.h"
+#import "CCDefinedConstants.h"
 
 @implementation AppDelegate_iPad
 

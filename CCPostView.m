@@ -7,8 +7,6 @@
 //
 
 #import "CCPostView.h"
-#import "CCDebugMacros.h"
-#import "CCIncident.h"
 
 @implementation CCPostView
 
@@ -32,6 +30,11 @@
 	locationManager.delegate = self;
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[locationManager startUpdatingLocation];
+	
+	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"accesstoken"]) {
+		[facebook authorize:nil delegate:self];
+	}
 }
 
 
@@ -74,6 +77,8 @@
 	[comment setText:@""];
 	[pickedImage release];
 	pickedImage = nil;
+	[pickedImagePreview removeFromSuperview];
+	[pickedImagePreview release];
 }
 
 - (IBAction) post {
@@ -115,7 +120,7 @@
 		imagePicker.delegate = self;
 	}
 	
-	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 	else if (buttonIndex == 1 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
 	else return;
 	
@@ -125,8 +130,19 @@
 #pragma mark UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	
 	[pickedImage release];
 	pickedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
+	
+	if (!pickedImagePreview) {
+		pickedImagePreview = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 30, 30)];
+		[self.view addSubview:pickedImagePreview];
+	}
+	
+	pickedImagePreview.image = pickedImage;
+	
+	[self dismissModalViewControllerAnimated:YES];
+	CCLOG(@"Selected Image");
 }
 
 #pragma mark CLLocationManagerDelegate
@@ -134,7 +150,6 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	[location release];
 	location = [newLocation retain];
-	[imagePicker popViewControllerAnimated:YES];
 	CCLOG(@"Got location %@", location);
 }
 

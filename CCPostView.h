@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "CCDebugMacros.h"
+#import "CCIncident.h"
+#import "Facebook.h"
+#import "CCDefinedConstants.h"
 
 
-@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate> {
+@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, FBSessionDelegate> {
 	
 	IBOutlet UITextView *comment;
 
 	UIActionSheet *imageSourceChooser;
 	UIImagePickerController *imagePicker;
 	UIImage *pickedImage;
+	UIImageView *pickedImagePreview;
 	
 	CLLocationManager *locationManager;
 	CLLocation *location;
