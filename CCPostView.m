@@ -71,7 +71,7 @@
 	[location release];
 }
 
-#pragma mark IB
+#pragma mark Interface Builder
 
 - (IBAction) cancel {
 	[comment setText:@""];
@@ -141,7 +141,12 @@
 	
 	if (!pickedImagePreview) {
 		pickedImagePreview = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 30, 30)];
+		
+		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
+		[pickedImagePreview addGestureRecognizer:tap];
+		pickedImagePreview.userInteractionEnabled = YES;
 		[self.view addSubview:pickedImagePreview];
+		[self.view bringSubviewToFront:pickedImagePreview];
 	}
 	
 	pickedImagePreview.image = pickedImage;
@@ -178,5 +183,49 @@
 -(void) subProgress:(NSString*)message {
 	[alert subProgress:message];
 }
+
+#pragma mark Animations
+
+- (void) zoomPreview {
+	static BOOL zoomed = NO;
+	if (zoomed) {
+		[self greyOutBackground:NO];
+		[UIView animateWithDuration:0.5 animations:^(void){
+			pickedImagePreview.frame = CGRectMake(20, 200, 30, 30);
+		}];
+	} else {
+		[self greyOutBackground:YES];
+		[UIView animateWithDuration:0.5 animations:^(void){
+			pickedImagePreview.frame = CGRectMake(70, 60, 170, 170);
+		}];	
+	}
+	
+	
+	zoomed = !zoomed;
+}
+
+- (void) greyOutBackground:(BOOL)yesOrNo {
+	if (yesOrNo) {
+		UIView *black = [[UIView alloc] initWithFrame:CGRectMake(-20, 0, 480, 320)];
+		black.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+		black.alpha = 0;
+		black.tag = 42;
+		[self.view addSubview:black];
+		[self.view bringSubviewToFront:pickedImagePreview];
+		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(void){
+			black.alpha = 0.5;
+		} completion:nil];
+		
+		[black release];
+	} else {
+		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^(void){
+			 [[self.view viewWithTag:42] setAlpha:0];
+		} completion:^(BOOL x){
+			[[self.view viewWithTag:42] removeFromSuperview];
+		}];
+	}
+}
+
+
 
 @end

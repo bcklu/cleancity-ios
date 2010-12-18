@@ -33,5 +33,8 @@
 - (IBAction) post;
 - (IBAction) showImageSourceChooser;
 
+- (void) zoomPreview;
+- (void) greyOutBackground:(BOOL)yesOrNo;
+
 
 @end
