@@ -8,6 +8,7 @@
 
 #import "CCPostView.h"
 #import "CCDebugMacros.h"
+#import "CCIncident.h"
 
 @implementation CCPostView
 
@@ -73,7 +74,10 @@
 	if (pickedImage) {
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
 		[incident send:nil];
+	} else {
+			// Error
 	}
+
 }
 
 - (IBAction) showImageSourceChooser {

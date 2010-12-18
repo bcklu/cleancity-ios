@@ -39,6 +39,7 @@
 		96ABA51712BCEBC3007FF3A5 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA51112BCEBC3007FF3A5 /* SBJsonParser.m */; };
 		96ABA51812BCEBC3007FF3A5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA51312BCEBC3007FF3A5 /* SBJsonWriter.m */; };
 		96ABA51D12BCEC24007FF3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */; };
+		96ABA54112BCF358007FF3A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA53F12BCF358007FF3A5 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		96ABA51212BCEBC3007FF3A5 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		96ABA51312BCEBC3007FF3A5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		96ABA54012BCF358007FF3A5 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Shared/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				96ABA53F12BCF358007FF3A5 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* CleanCity-Info.plist */,
 			);
 			name = Shared;
@@ -357,6 +360,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -376,6 +380,7 @@
 				2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */,
 				02BA912212BCBC1C00D1819D /* README.textile in Resources */,
 				96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */,
+				96ABA54112BCF358007FF3A5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +415,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96ABA53F12BCF358007FF3A5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96ABA54012BCF358007FF3A5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
