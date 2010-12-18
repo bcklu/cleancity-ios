@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CCProgressCallbackProtocol.h"
 
-@interface CCAlertView : UIView {
+
+@interface CCAlertView : UIView <CCProgressCallbackProtocol> {
 	UIActivityIndicatorView *indicatorView;
 	UIProgressView* progress;
 	UILabel *descriptionLabel;

@@ -86,7 +86,11 @@
 	if (pickedImage) {
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
 		CCLOG(@"incident: %@",incident);
-		[incident send:nil];
+		
+		if (!alert) alert = [[CCAlertView alloc] init];
+		[self.view addSubview:alert];
+
+		[incident send:self];
 		[incident release];
 	} else {
 			// Error
@@ -153,6 +157,26 @@
 	[location release];
 	location = [newLocation retain];
 	CCLOG(@"Got location %@", location);
+}
+
+#pragma mark CCProgressCallbackProtocol
+
+-(void) startProgress:(NSNumber*)count {
+	[alert startProgress:count];
+}
+
+-(void) doProgress:(NSNumber*)progressIndex {
+	[alert doProgress:progressIndex];
+}
+
+-(void) endProgress {
+	[alert endProgress];
+	[alert removeFromSuperview];
+	[self cancel];
+}
+
+-(void) subProgress:(NSString*)message {
+	[alert subProgress:message];
 }
 
 @end

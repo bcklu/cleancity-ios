@@ -36,6 +36,7 @@
 	[facebook handleOpenURL:url];
 	[[NSUserDefaults standardUserDefaults] setObject:facebook.accessToken forKey:@"accesstoken"];
 		CCLOG(@"Got Token: %@", facebook.accessToken);
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	[facebook release];
 	return YES;
 }

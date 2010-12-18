@@ -12,9 +12,10 @@
 #import "CCIncident.h"
 #import "Facebook.h"
 #import "CCDefinedConstants.h"
+#import "CCAlertView.h"
 
 
-@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, FBSessionDelegate> {
+@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, FBSessionDelegate, CCProgressCallbackProtocol> {
 	
 	IBOutlet UITextView *comment;
 
@@ -22,6 +23,7 @@
 	UIImagePickerController *imagePicker;
 	UIImage *pickedImage;
 	UIImageView *pickedImagePreview;
+	CCAlertView *alert;
 	
 	CLLocationManager *locationManager;
 	CLLocation *location;
