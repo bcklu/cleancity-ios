@@ -24,8 +24,8 @@
 	
 	CCPostView *postView = [[CCPostView alloc] init];
 	postView.view.frame = CGRectMake(0, 20, 320, 460);
-    
 	[self.window addSubview:postView.view];
+	[postView release];
 	 
 	 
     [self.window makeKeyAndVisible];

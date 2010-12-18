@@ -40,6 +40,7 @@
 		96ABA51812BCEBC3007FF3A5 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA51312BCEBC3007FF3A5 /* SBJsonWriter.m */; };
 		96ABA51D12BCEC24007FF3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */; };
 		96ABA54112BCF358007FF3A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA53F12BCF358007FF3A5 /* Localizable.strings */; };
+		96ABA54612BCF3F9007FF3A5 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA54512BCF3F9007FF3A5 /* 86-camera.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		96ABA51312BCEBC3007FF3A5 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		96ABA54012BCF358007FF3A5 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Shared/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96ABA54512BCF3F9007FF3A5 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				96ABA54512BCF3F9007FF3A5 /* 86-camera.png */,
 				96ABA53F12BCF358007FF3A5 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* CleanCity-Info.plist */,
 			);
@@ -381,6 +384,7 @@
 				02BA912212BCBC1C00D1819D /* README.textile in Resources */,
 				96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */,
 				96ABA54112BCF358007FF3A5 /* Localizable.strings in Resources */,
+				96ABA54612BCF3F9007FF3A5 /* 86-camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

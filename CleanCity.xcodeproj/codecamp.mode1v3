@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>96ABA53E12BCF264007FF3A5</string>
+						<string>96ABA55D12BCF579007FF3A5</string>
 						<key>history</key>
 						<array>
 							<string>96ABA52912BCEFE5007FF3A5</string>
@@ -322,8 +322,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>24</integer>
+									<integer>22</integer>
+									<integer>16</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -347,7 +348,7 @@
 							<real>214</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>810 30 1629 973 0 0 1680 1028 </string>
+						<string>51 55 1629 973 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -365,7 +366,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCPostView.m</string>
+								<string>AppDelegate_iPhone.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -373,21 +374,23 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCPostView.m</string>
+										<string>AppDelegate_iPhone.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>96ABA53D12BCF264007FF3A5</string>
+										<string>96ABA55C12BCF579007FF3A5</string>
 										<key>history</key>
 										<array>
-											<string>96ABA47512BCC85E007FF3A5</string>
 											<string>96ABA47612BCC85E007FF3A5</string>
 											<string>96ABA47712BCC85E007FF3A5</string>
 											<string>96ABA4FC12BCEACB007FF3A5</string>
 											<string>96ABA53012BCF224007FF3A5</string>
 											<string>96ABA53112BCF224007FF3A5</string>
-											<string>96ABA53212BCF224007FF3A5</string>
-											<string>96ABA53312BCF224007FF3A5</string>
+											<string>96ABA55712BCF579007FF3A5</string>
+											<string>96ABA55812BCF579007FF3A5</string>
+											<string>96ABA55912BCF579007FF3A5</string>
+											<string>96ABA55A12BCF579007FF3A5</string>
+											<string>96ABA55B12BCF579007FF3A5</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -401,7 +404,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1393, 591}}</string>
 								<key>RubberWindowFrame</key>
-								<string>810 30 1629 973 0 0 1680 1028 </string>
+								<string>51 55 1629 973 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -421,7 +424,7 @@
 								<key>Frame</key>
 								<string>{{0, 596}, {1393, 336}}</string>
 								<key>RubberWindowFrame</key>
-								<string>810 30 1629 973 0 0 1680 1028 </string>
+								<string>51 55 1629 973 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -585,7 +588,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>96ABA53A12BCF224007FF3A5</string>
+		<string>96ABA55E12BCF579007FF3A5</string>
 		<string>96ABA53B12BCF224007FF3A5</string>
 		<string>96ABA53C12BCF224007FF3A5</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -595,7 +598,7 @@
 		<string>/Users/codecamp/Documents/CleanCity/cleancity-ios/CleanCity.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>810 30 1629 973 0 0 1680 1028 </string>
+	<string>51 55 1629 973 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -616,7 +619,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCPostView.m</string>
+								<string>AppDelegate_iPhone.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

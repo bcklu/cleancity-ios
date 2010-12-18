@@ -59,6 +59,13 @@
 
 - (void)dealloc {
     [super dealloc];
+	[comment release];
+	[imageSourceChooser release];
+	[imagePicker release];
+	[pickedImage release];
+	[locationManager stopUpdatingLocation];
+	[locationManager release];
+	[location release];
 }
 
 #pragma mark IB
@@ -74,6 +81,7 @@
 	if (pickedImage) {
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
 		[incident send:nil];
+		[incident release];
 	} else {
 			// Error
 	}
@@ -117,6 +125,7 @@
 #pragma mark UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	[pickedImage release];
 	pickedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
 }
 
