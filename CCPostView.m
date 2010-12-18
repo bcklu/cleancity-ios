@@ -61,7 +61,6 @@
 
 
 - (void)dealloc {
-    [super dealloc];
 	[comment release];
 	[imageSourceChooser release];
 	[imagePicker release];
@@ -69,6 +68,8 @@
 	[locationManager stopUpdatingLocation];
 	[locationManager release];
 	[location release];
+	
+	[super dealloc];
 }
 
 #pragma mark Interface Builder
@@ -123,8 +124,9 @@
 	if (!imagePicker) {
 		imagePicker = [[UIImagePickerController alloc] init];
 		imagePicker.allowsEditing = NO;
-		imagePicker.delegate = self;
 	}
+	
+	imagePicker.delegate = self;
 	
 	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 	else if (buttonIndex == 1 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -146,10 +148,12 @@
 		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
 		[pickedImagePreview addGestureRecognizer:tap];
 		pickedImagePreview.userInteractionEnabled = YES;
-		[self.view addSubview:pickedImagePreview];
-		[self.view bringSubviewToFront:pickedImagePreview];
+		//[self.view addSubview:pickedImagePreview];
+//		[self.view bringSubviewToFront:pickedImagePreview];
 	}
 	
+	[self.view addSubview:pickedImagePreview];
+	[self.view bringSubviewToFront:pickedImagePreview];	
 	pickedImagePreview.image = pickedImage;
 	
 	[self dismissModalViewControllerAnimated:YES];
