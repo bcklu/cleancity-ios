@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CCPostView : UIViewController <UIActionSheetDelegate> {
+@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
 	
 	IBOutlet UITextView *comment;
 
 	UIActionSheet *imageSourceChooser;
+	UIImagePickerController *imagePicker;
+	UIImage *pickedImage;
 }
 
 - (IBAction) cancel;

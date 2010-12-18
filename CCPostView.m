@@ -7,7 +7,7 @@
 //
 
 #import "CCPostView.h"
-
+#import "CCDebugMacros.h"
 
 @implementation CCPostView
 
@@ -58,7 +58,9 @@
 #pragma mark IB
 
 - (IBAction) cancel {
-	
+	[comment setText:@""];
+	[pickedImage release];
+	pickedImage = nil;
 }
 
 - (IBAction) post {
@@ -68,15 +70,43 @@
 }
 
 - (IBAction) showImageSourceChooser {
+	
 
 	if (!imageSourceChooser) {
-		imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString("IMAGE_SOURCE_TITLE", "") delegate:self cancelButtonTitle:NSLocalizedString("IMAGE_SOURCE_CANCEL", "") destructiveButtonTitle:<#(NSString *)destructiveButtonTitle#> otherButtonTitles:NSLocalizedString("", "")]
+		
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), NSLocalizedString(@"IMAGE_SOURCE_CAMERA", @""), nil];
+		} else {
+					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), nil];
+		}
+
+
 	}
+	
+	
+	[imageSourceChooser showInView:self.view];
 }
 
 #pragma mark UIActionSheetDelegate
 
-– actionSheet:clickedButtonAtIndex:
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	
+	if (!imagePicker) {
+		imagePicker = [[UIImagePickerController alloc] init];
+		imagePicker.allowsEditing = NO;
+		imagePicker.delegate = self;
+	}
+	
+	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	else if (buttonIndex == 1) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	
+	[self presentModalViewController:imagePicker animated:YES];
+}
 
+#pragma mark UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	pickedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
+}
 
 @end
