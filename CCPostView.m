@@ -78,7 +78,7 @@
 	[pickedImage release];
 	pickedImage = nil;
 	[pickedImagePreview removeFromSuperview];
-	[pickedImagePreview release];
+	[pickedImagePreview release], pickedImagePreview=nil;
 }
 
 - (IBAction) post {
