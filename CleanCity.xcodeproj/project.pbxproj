@@ -23,6 +23,8 @@
 		02BA913F12BCBCE700D1819D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA913E12BCBCE700D1819D /* SystemConfiguration.framework */; };
 		02BA914112BCBCF400D1819D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA914012BCBCF400D1819D /* MobileCoreServices.framework */; };
 		02BA914512BCBD1900D1819D /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA914412BCBD1900D1819D /* libz.1.2.3.dylib */; };
+		02BA934812BD01E800D1819D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA934712BD01E800D1819D /* NSData+Base64.m */; };
+		02BA937712BD062400D1819D /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA937612BD062400D1819D /* UIImage+Extras.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -77,6 +79,10 @@
 		02BA913E12BCBCE700D1819D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		02BA914012BCBCF400D1819D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		02BA914412BCBD1900D1819D /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		02BA934612BD01E800D1819D /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
+		02BA934712BD01E800D1819D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
+		02BA937512BD062400D1819D /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
+		02BA937612BD062400D1819D /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* CleanCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -179,9 +185,13 @@
 		02BA90AB12BCBC1C00D1819D /* external */ = {
 			isa = PBXGroup;
 			children = (
+				02BA934612BD01E800D1819D /* NSData+Base64.h */,
+				02BA934712BD01E800D1819D /* NSData+Base64.m */,
 				96ABA50812BCEBC3007FF3A5 /* JSON */,
 				02BA912B12BCBC7D00D1819D /* Reachability */,
 				02BA90AC12BCBC1C00D1819D /* asi-http */,
+				02BA937512BD062400D1819D /* UIImage+Extras.h */,
+				02BA937612BD062400D1819D /* UIImage+Extras.m */,
 			);
 			path = external;
 			sourceTree = "<group>";
@@ -415,6 +425,8 @@
 				96ABA51612BCEBC3007FF3A5 /* SBJsonBase.m in Sources */,
 				96ABA51712BCEBC3007FF3A5 /* SBJsonParser.m in Sources */,
 				96ABA51812BCEBC3007FF3A5 /* SBJsonWriter.m in Sources */,
+				02BA934812BD01E800D1819D /* NSData+Base64.m in Sources */,
+				02BA937712BD062400D1819D /* UIImage+Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

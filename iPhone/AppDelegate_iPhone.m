@@ -12,24 +12,19 @@
 
 @implementation AppDelegate_iPhone
 
-@synthesize window;
-
+@synthesize window, postViewController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
-	
+    // Override point for customization after application launch.	
 	CCPostView *postView = [[CCPostView alloc] init];
 	postView.view.frame = CGRectMake(0, 20, 320, 460);
-	[self.window addSubview:postView.view];
+	self.postViewController = postView;
 	[postView release];
-	 
-	 
+	[self.window addSubview:postView.view];
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -83,6 +78,7 @@
 
 
 - (void)dealloc {
+	self.postViewController = nil;
     [window release];
     [super dealloc];
 }
