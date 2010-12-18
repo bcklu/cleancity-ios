@@ -80,6 +80,7 @@
 	
 	if (pickedImage) {
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
+		CCLOG(@"incident: %@",incident);
 		[incident send:nil];
 		[incident release];
 	} else {
@@ -127,6 +128,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	[pickedImage release];
 	pickedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark CLLocationManagerDelegate
@@ -134,7 +136,6 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	[location release];
 	location = [newLocation retain];
-	[imagePicker popViewControllerAnimated:YES];
 	CCLOG(@"Got location %@", location);
 }
 

@@ -17,22 +17,19 @@
 @interface CCIncident()
 
 @property (assign) NSObject<CCProgressCallbackProtocol>* callback;
-
 - (void)sendRequest:(NSURLRequest*)req;
-
 @end
-
 
 @implementation CCIncident
 
-@synthesize description, user, lat, lon, image, callback;
+@synthesize text, user, latitude, longitude, image, callback;
 
-- (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)latitude andLon:(double)longitude {	
+- (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)lat andLon:(double)lon {	
 	if((self=[self init])!=nil) {
-		self.description = desc;
+		self.text = desc;
 		self.image = img;
-		self.lat = latitude;
-		self.lon = longitude;
+		self.latitude = lat;
+		self.longitude = lon;
 	}	
 	
 	return self;
@@ -42,17 +39,10 @@
 	
 	self.callback = cb;
 	
-	NSDictionary *jsonDict = [NSDictionary dictionaryWithObjectsAndKeys:
-							  self.image, @"image",
-							  self.description, @"description",
-							  self.lat, @"latitude",
-							  self.lon, @"longitude",
-							  @"", @"author_id", nil];	
+	NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys: self.image, @"image", self.text, @"description", [NSNumber numberWithDouble:self.latitude], @"latitude", [NSNumber numberWithDouble:self.longitude], @"longitude", @"", @"author_id", nil];	
+	NSDictionary *incident_report = [NSDictionary dictionaryWithObjectsAndKeys:incident, @"incident_report", nil];	
 	
-	NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys:jsonDict, @"incident_report", nil];
-	
-	NSString *jsonRequest = [incident JSONRepresentation];
-	
+	NSString *jsonRequest = [incident_report JSONRepresentation];	
 	CCLOG(@"jsonRequest is %@", jsonRequest);
 	
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:kWebServiceUrl]
@@ -89,8 +79,13 @@
     [self.callback endProgress];
 }
 
+- (NSString*)description {
+	return [NSString stringWithFormat:@"%@, %d, %d", self.text, self.latitude, self.longitude];
+}
+
 - (void)dealloc {	
-	self.description = nil;
+	self.callback = nil;
+	self.text = nil;
 	self.image = nil;	
 	[super dealloc];
 }

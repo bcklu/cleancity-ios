@@ -443,7 +443,7 @@
 				GCC_PREFIX_HEADER = CleanCity_Prefix.pch;
 				INFOPLIST_FILE = "CleanCity-Info.plist";
 				PRODUCT_NAME = CleanCity;
-				SDKROOT = iphonesimulator4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
