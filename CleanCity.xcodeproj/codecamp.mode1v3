@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>226</real>
+								<real>214</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -286,7 +286,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {226, 914}}</string>
+							<string>{{0, 0}, {214, 914}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -298,11 +298,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {243, 932}}</string>
+						<string>{{0, 0}, {231, 932}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>226</real>
+							<real>214</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>51 55 1629 973 0 0 1680 1028 </string>
@@ -310,7 +310,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>243pt</string>
+					<string>231pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -335,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>96ABA4A412BCCD0E007FF3A5</string>
+										<string>96ABA4B412BCCEDC007FF3A5</string>
 										<key>history</key>
 										<array>
 											<string>96ABA47512BCC85E007FF3A5</string>
@@ -354,7 +354,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1381, 598}}</string>
+								<string>{{0, 0}, {1393, 598}}</string>
 								<key>RubberWindowFrame</key>
 								<string>51 55 1629 973 0 0 1680 1028 </string>
 							</dict>
@@ -374,7 +374,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 603}, {1381, 329}}</string>
+								<string>{{0, 603}, {1393, 329}}</string>
 								<key>RubberWindowFrame</key>
 								<string>51 55 1629 973 0 0 1680 1028 </string>
 							</dict>
@@ -385,7 +385,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1381pt</string>
+					<string>1393pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -540,7 +540,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>96ABA49B12BCCC15007FF3A5</string>
+		<string>96ABA4B512BCCEDC007FF3A5</string>
 		<string>96ABA48312BCC85E007FF3A5</string>
 		<string>96ABA48412BCC85E007FF3A5</string>
 		<string>1CD10A99069EF8BA00B06720</string>

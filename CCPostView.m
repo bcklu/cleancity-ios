@@ -91,6 +91,8 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	
+	CCLOG(@"Button %d tapped", buttonIndex);
+	
 	if (!imagePicker) {
 		imagePicker = [[UIImagePickerController alloc] init];
 		imagePicker.allowsEditing = NO;
@@ -98,7 +100,8 @@
 	}
 	
 	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-	else if (buttonIndex == 1) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	else if (buttonIndex == 1 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	else return;
 	
 	[self presentModalViewController:imagePicker animated:YES];
 }
