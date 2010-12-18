@@ -30,7 +30,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					742,
+					1142,
 					20,
 					48,
 					43,
@@ -69,8 +69,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 314357793;
-			PBXWorkspaceStateSaveDate = 314357793;
+			PBXPerProjectTemplateStateSaveDate = 314360667;
+			PBXWorkspaceStateSaveDate = 314360667;
 		};
 		sourceControlManager = 96ABA42112BCB840007FF3A5 /* Source Control */;
 		userBuildSettings = {
@@ -122,19 +122,5 @@
 	96ABA42212BCB840007FF3A5 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	96ABA42412BCB8AB007FF3A5 /* CCPostView.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {920, 350}}";
-			sepNavSelRange = "{277, 0}";
-			sepNavVisRange = "{0, 365}";
-		};
-	};
-	96ABA42512BCB8AB007FF3A5 /* CCPostView.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 832}}";
-			sepNavSelRange = "{756, 0}";
-			sepNavVisRange = "{138, 705}";
-		};
 	};
 }
