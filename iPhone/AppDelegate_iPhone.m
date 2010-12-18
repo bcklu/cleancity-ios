@@ -8,6 +8,7 @@
 
 #import "AppDelegate_iPhone.h"
 #import "CCDebugMacros.h"
+#import "CCPostView.h"
 
 @implementation AppDelegate_iPhone
 
@@ -20,7 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+	
+	CCPostView *postView = [[CCPostView alloc] init];
+	postView.view.frame = CGRectMake(0, 20, 320, 460);
     
+	[self.window addSubview:postView.view];
+	 
+	 
     [self.window makeKeyAndVisible];
     
     return YES;
