@@ -202,24 +202,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>96ADE67312BD17170098F30B</string>
+				<string>96ADE69412BD1A230098F30B</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>CCAlertView.h</string>
+				<string>FBRequest.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>96ADE67412BD17170098F30B</string>
+						<string>96ADE69512BD1A230098F30B</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>CCAlertView.h</string>
+						<string>FBRequest.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>96ADE68312BD179D0098F30B</string>
+						<string>96ADE6C112BD1C3B0098F30B</string>
 						<key>history</key>
 						<array>
-							<string>96ADE67512BD17170098F30B</string>
+							<string>96ADE68912BD19F50098F30B</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -235,7 +235,47 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>293 92 1259 843 0 0 1680 1028 </string>
+				<string>112 138 1259 843 0 0 1680 1028 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>96ADE69712BD1A230098F30B</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>Facebook.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>96ADE69812BD1A230098F30B</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>Facebook.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>96ADE6C212BD1C3B0098F30B</string>
+						<key>history</key>
+						<array>
+							<string>96ADE68812BD19D20098F30B</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1259, 802}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>340 77 1259 843 0 0 1680 1028 </string>
 			</dict>
 		</dict>
 	</array>
@@ -305,6 +345,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>02BA90AB12BCBC1C00D1819D</string>
+								<string>96AE21E812BD078E007AE77B</string>
 								<string>02BA904112BCB4F900D1819D</string>
 								<string>02BA908612BCB96600D1819D</string>
 								<string>02BA904A12BCB50E00D1819D</string>
@@ -321,8 +363,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
-									<integer>21</integer>
+									<integer>28</integer>
+									<integer>26</integer>
+									<integer>20</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -364,7 +407,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppDelegate_iPhone.m</string>
+								<string>CCPostView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -372,11 +415,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppDelegate_iPhone.m</string>
+										<string>CCPostView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>96ADE68212BD179D0098F30B</string>
+										<string>96ADE6C012BD1C3B0098F30B</string>
 										<key>history</key>
 										<array>
 											<string>96ABA4FC12BCEACB007FF3A5</string>
@@ -387,13 +430,15 @@
 											<string>96AE218A12BD052B007AE77B</string>
 											<string>96AE220712BD0879007AE77B</string>
 											<string>96AE222012BD09E9007AE77B</string>
-											<string>96AE222112BD09E9007AE77B</string>
 											<string>96AE224612BD0E6D007AE77B</string>
-											<string>96ADE66E12BD17170098F30B</string>
 											<string>96ADE66F12BD17170098F30B</string>
 											<string>96ADE67F12BD179D0098F30B</string>
-											<string>96ADE68012BD179D0098F30B</string>
-											<string>96ADE68112BD179D0098F30B</string>
+											<string>96ADE68E12BD1A230098F30B</string>
+											<string>96ADE69112BD1A230098F30B</string>
+											<string>96ADE69F12BD1AF20098F30B</string>
+											<string>96ADE6A712BD1B0C0098F30B</string>
+											<string>96ADE6BE12BD1C3B0098F30B</string>
+											<string>96ADE6BF12BD1C3B0098F30B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -596,8 +641,9 @@
 		<string>96ADE65012BD12600098F30B</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>96ADE67312BD17170098F30B</string>
 		<string>96ABA44412BCC1A0007FF3A5</string>
+		<string>96ADE69712BD1A230098F30B</string>
+		<string>96ADE69412BD1A230098F30B</string>
 		<string>/Users/codecamp/Documents/CleanCity/cleancity-ios/CleanCity.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -624,7 +670,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCPostView.m</string>
+								<string>AppDelegate_iPhone.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -693,7 +739,7 @@
 			<key>WindowToolGUID</key>
 			<string>96ABA44412BCC1A0007FF3A5</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -927,6 +973,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

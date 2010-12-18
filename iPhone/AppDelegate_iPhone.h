@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Facebook.h"
 
-@interface AppDelegate_iPhone : NSObject <UIApplicationDelegate> {
+@interface AppDelegate_iPhone : NSObject <UIApplicationDelegate, FBRequestDelegate> {
     UIWindow *window;
 }
 

@@ -32,7 +32,7 @@
 	[locationManager startUpdatingLocation];
 	
 	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
-	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"accesstoken"]) {
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
 		[facebook authorize:nil delegate:self];
 	}
 }

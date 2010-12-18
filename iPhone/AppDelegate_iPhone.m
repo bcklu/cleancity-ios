@@ -34,6 +34,7 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
 	Facebook *facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
 	[facebook handleOpenURL:url];
+	[facebook requestWithGraphPath:@"me" andDelegate:self];
 	[[NSUserDefaults standardUserDefaults] setObject:facebook.accessToken forKey:@"accesstoken"];
 		CCLOG(@"Got Token: %@", facebook.accessToken);
 	[[NSUserDefaults standardUserDefaults] synchronize];
@@ -94,6 +95,14 @@
 	self.postViewController = nil;
     [window release];
     [super dealloc];
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+	if ([result isKindOfClass:[NSDictionary class]]) {
+		[[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"id"] forKey:@"userid"];
+		CCLOG(@"Userid: %@", [result objectForKey:@"id"]);
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}	
 }
 
 
