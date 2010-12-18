@@ -87,7 +87,10 @@
 		CCIncident *incident = [[CCIncident alloc] initWithDescription:comment.text andImage:pickedImage andLat:location.coordinate.latitude andLon:location.coordinate.longitude];
 		CCLOG(@"incident: %@",incident);
 		
-		if (!alert) alert = [[CCAlertView alloc] init];
+		if (!alert) { 
+			alert = [[CCAlertView alloc] initWithFrame:CGRectMake(70.0f, 50.0f, 180.0f, 180.0f)];
+		}
+		
 		[self.view addSubview:alert];
 
 		[incident send:self];
@@ -98,9 +101,7 @@
 
 }
 
-- (IBAction) showImageSourceChooser {
-	
-
+- (IBAction) showImageSourceChooser {	
 	if (!imageSourceChooser) {
 		
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {

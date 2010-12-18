@@ -41,12 +41,12 @@
 	self.callback = cb;	
 	[self.callback startProgress:[NSNumber numberWithInt:1]];
 	 
-	NSString* userId = [[NSUserDefaults standardUserDefaults] stringForKey:@"accesstoken"];
+	NSString* userId = [[NSUserDefaults standardUserDefaults] stringForKey:@"userid"];
 	
 	if(userId) {
 		UIImage *scaledImage = [self.image imageByScalingProportionallyToSize:kImageTargetSize];
 		NSData *imageData = UIImageJPEGRepresentation(scaledImage, 0.8f);	
-		NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys: [imageData base64EncodingWithLineLength:0], @"image", self.text, @"description", [NSNumber numberWithDouble:self.latitude], @"latitude", [NSNumber numberWithDouble:self.longitude], @"longitude", ((userId) ? userId : @""), @"author_id", nil];	
+		NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys: [imageData base64EncodingWithLineLength:0], @"image", self.text, @"description", [NSNumber numberWithDouble:self.latitude], @"latitude", [NSNumber numberWithDouble:self.longitude], @"longitude", ((userId) ? userId : @""), @"user", nil];	
 		NSDictionary *incident_report = [NSDictionary dictionaryWithObjectsAndKeys:incident, @"incident_report", nil];	
 		
 		NSString *jsonRequest = [incident_report JSONRepresentation];

@@ -157,6 +157,7 @@
 	
 	self.progress.progress = 0.0f;
 	maxcount=[count intValue];
+	[self.indicatorView startAnimating];
 }
 
 -(void) doProgress:(NSNumber*)progressIndex  {
@@ -166,6 +167,7 @@
 
 -(void) endProgress {
 	self.progress.progress = 1.0f;
+	[self.indicatorView stopAnimating];
 }
 
 -(void) subProgress:(NSString*)message {
