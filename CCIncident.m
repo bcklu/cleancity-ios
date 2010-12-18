@@ -47,7 +47,6 @@
 							  self.description, @"description",
 							  self.lat, @"latitude",
 							  self.lon, @"longitude",
-/*							  self.user, @"user",*/ 
 							  @"", @"author_id", nil];	
 	
 	NSDictionary *incident = [NSDictionary dictionaryWithObjectsAndKeys:jsonDict, @"incident_report", nil];
@@ -66,11 +65,10 @@
 	[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
 	[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 	[request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
-	[request setHTTPBody: requestData];	
+	[request setHTTPBody: requestData];
 	
 	[self.callback startProgress:[NSNumber numberWithInt:1]];
 	[self performSelectorInBackground:@selector(sendRequest:) withObject:request];
-	[self.callback endProgress];
 }
 
 - (void)sendRequest:(NSURLRequest*)req {
@@ -78,13 +76,17 @@
 	NSURLResponse* response = nil;
 	NSError* error = nil;
 	
-	[NSURLConnection sendSynchronousRequest:req 
+	NSData* resp = [NSURLConnection sendSynchronousRequest:req 
 						  returningResponse:&response 
 									  error:&error];
 	
 	if(error) {
 			
 	}	
+	
+	// TODO: do anything with response data
+	
+    [self.callback endProgress];
 }
 
 - (void)dealloc {	
