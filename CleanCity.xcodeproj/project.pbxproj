@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02BA907312BCB84900D1819D /* CCIncident.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA907212BCB84900D1819D /* CCIncident.m */; };
+		02BA908512BCB92B00D1819D /* CCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA908412BCB92B00D1819D /* CCAlertView.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -19,6 +21,11 @@
 
 /* Begin PBXFileReference section */
 		02BA905512BCB57E00D1819D /* CCDebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDebugMacros.h; sourceTree = "<group>"; };
+		02BA907112BCB84900D1819D /* CCIncident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCIncident.h; sourceTree = "<group>"; };
+		02BA907212BCB84900D1819D /* CCIncident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCIncident.m; sourceTree = "<group>"; };
+		02BA908312BCB92B00D1819D /* CCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAlertView.h; sourceTree = "<group>"; };
+		02BA908412BCB92B00D1819D /* CCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAlertView.m; sourceTree = "<group>"; };
+		02BA908712BCB97700D1819D /* CCProgressCallbackProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCProgressCallbackProtocol.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* CleanCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -51,6 +58,7 @@
 		02BA904112BCB4F900D1819D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				02BA908612BCB96600D1819D /* Protocols */,
 				02BA904A12BCB50E00D1819D /* Model */,
 				02BA904912BCB50500D1819D /* View */,
 				02BA904812BCB4FF00D1819D /* Controller */,
@@ -69,6 +77,8 @@
 		02BA904912BCB50500D1819D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02BA908312BCB92B00D1819D /* CCAlertView.h */,
+				02BA908412BCB92B00D1819D /* CCAlertView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -76,8 +86,18 @@
 		02BA904A12BCB50E00D1819D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02BA907112BCB84900D1819D /* CCIncident.h */,
+				02BA907212BCB84900D1819D /* CCIncident.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		02BA908612BCB96600D1819D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				02BA908712BCB97700D1819D /* CCProgressCallbackProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -216,6 +236,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				2860E328111B887F00E27156 /* AppDelegate_iPhone.m in Sources */,
 				2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */,
+				02BA907312BCB84900D1819D /* CCIncident.m in Sources */,
+				02BA908512BCB92B00D1819D /* CCAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
