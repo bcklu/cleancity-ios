@@ -51,7 +51,7 @@
 		
 		NSString *jsonRequest = [incident_report JSONRepresentation];
 		
-		NSMutableURLRequest *request = 	[NSMutableURLRequest requestWithURL:[NSURL URLWithString:kWebServiceUrl]];	
+		NSMutableURLRequest *request = 	[NSMutableURLRequest requestWithURL:[NSURL URLWithString:kRestSendIncident]];	
 		NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
 		
 		[request setHTTPMethod:@"POST"];
@@ -93,6 +93,10 @@
 	[pool release];
 }
 
+- (void)fetchIncidentImage:(void (^)(CCIncident incident))block {
+	
+}
+
 - (NSString*)description {
 	return [NSString stringWithFormat:@"%@, %d, %d", self.text, self.latitude, self.longitude];
 }
@@ -102,6 +106,14 @@
 	self.text = nil;
 	self.image = nil;	
 	[super dealloc];
+}
+
++ (NSArray*)fetchIncidentsAround:(CLLocation*)location {
+	NSMutableArray *incidents = [NSMutableArray array];
+	
+	// TOOD: fetch
+	
+	return incidents;
 }
 
 @end

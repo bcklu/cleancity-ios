@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CCProgressCallbackProtocol.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface CCIncident : NSObject {
 	NSString* text;
@@ -27,5 +28,8 @@
 
 - (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)latitude andLon:(double)longitude;
 - (void)send:(NSObject<CCProgressCallbackProtocol>*)callback;
+- (void)fetchIncidentImage:(void (^)(CCIncident incident))block;
+
++ (NSArray*)fetchIncidentsAround:(CLLocation*)location;
 
 @end

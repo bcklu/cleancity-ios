@@ -157,7 +157,7 @@
 	pickedImagePreview.image = pickedImage;
 	
 	[self dismissModalViewControllerAnimated:YES];
-	CCLOG(@"Selected Image");
+	CCLOG(@"Selected Image");	
 
 }
 
