@@ -33,8 +33,10 @@
 	
 	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
 	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
-		[facebook authorize:nil delegate:self];
+		[facebook authorize:[NSArray arrayWithObject:@"offline_access"] delegate:self];
 	}
+	
+	[CCIncident testFetch];
 }
 
 
