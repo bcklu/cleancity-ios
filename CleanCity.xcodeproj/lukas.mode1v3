@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>80B4753812BE507900F86565</string>
+										<string>80B4753A12BE6D4700F86565</string>
 										<key>history</key>
 										<array>
 											<string>80B4729B12BE05E500F86565</string>
@@ -555,13 +555,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>80B4753912BE507900F86565</string>
 		<string>80B474DA12BE498F00F86565</string>
 		<string>80B474DB12BE498F00F86565</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>80B4727112BDFFEA00F86565</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/lukas/Documents/cleancity-ios/CleanCity.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>123 83 1092 693 0 0 1280 778 </string>
@@ -912,7 +911,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1013, 445}}</string>
 								<key>RubberWindowFrame</key>
-								<string>95 136 1013 486 0 0 1280 778 </string>
+								<string>70 170 1013 486 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -941,7 +940,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>95 136 1013 486 0 0 1280 778 </string>
+			<string>70 170 1013 486 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
