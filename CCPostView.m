@@ -31,7 +31,14 @@
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[locationManager startUpdatingLocation];
 	
-
+	UIImageView *navbarimg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar"]];
+	
+	[navbar addSubview:navbarimg];
+	[navbar sendSubviewToBack:navbarimg];
+	
+	map = [[CCNearIncidentsMapView alloc] init];
+	map.postView = self;
+	
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -46,14 +53,30 @@
 	}
 }
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+		map.displayedForRotation = YES;
+		[self showMapView];
+	} else {
+		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+		if (map.displayedForRotation) {
+			[self closeMapView];
+			map.displayedForRotation = NO;
+		}
+		
+	} 
+}
 
-/*
+
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+	
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+		// return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -124,6 +147,33 @@
 	[imageSourceChooser showInView:self.view];
 }
 
+- (IBAction) showMapView {
+	
+	if (!map) {
+		map = [[CCNearIncidentsMapView alloc] init];
+	}
+	
+	map.view.frame = CGRectMake(0, 0, 320, 480);
+	map.view.alpha = 0;
+	[UIView animateWithDuration:0.5 animations:^(void){
+		map.view.alpha = 1;
+	}];
+	
+	[self.view addSubview:map.view];
+	[comment resignFirstResponder];
+	[map viewWillAppear:YES];
+}
+
+- (void) closeMapView {
+	self.view.frame = CGRectMake(0, 20, 320, 460);
+	[comment becomeFirstResponder];
+	[UIView animateWithDuration:0.5 animations:^(void){
+		map.view.alpha = 0;
+	} completion:^(BOOL x){
+		[map.view removeFromSuperview];
+	}];
+}
+
 #pragma mark UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -173,6 +223,9 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	[location release];
 	location = [newLocation retain];
+	if (map) {
+		map.location = location;
+	}
 		//	CCLOG(@"Got location %@", location);
 }
 
