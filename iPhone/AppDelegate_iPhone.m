@@ -25,7 +25,7 @@
 
 	self.postViewController = postView;
 	[postView release];
-	[self.window addSubview:postView.view];
+	[self.window addSubview:self.postViewController.view];
 
     [self.window makeKeyAndVisible];
     return YES;
