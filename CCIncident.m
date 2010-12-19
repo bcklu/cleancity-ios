@@ -31,6 +31,18 @@
 
 @synthesize text, user, latitude, longitude, image, callback, imageLink, delegate;
 
+- (CLLocationCoordinate2D)coordinate {
+	return CLLocationCoordinate2DMake(self.latitude, self.longitude);
+}
+
+- (NSString*)title {
+	return NSLocalizedString(@"Problem", @"CCIncident");
+}
+
+- (NSString*)subtitle {
+	return @"";
+}
+
 #pragma mark -
 #pragma mark init and overrides
 - (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)lat andLon:(double)lon {	
@@ -151,22 +163,20 @@
 
 + (NSArray*)convertToIncidents:(NSString*)JSONString {	
 	SBJSON *parser = [[SBJSON alloc] init];    
-	NSArray *incidetsList = [parser objectWithString:JSONString error:nil];	
-	
+	NSArray *incidetsList = [parser objectWithString:JSONString error:nil];		
 	NSMutableArray *incidents = [NSMutableArray array];
-	CCIncident *i;
+	
+	CCIncident *i=nil;
 	for(NSDictionary* d in incidetsList) {
 		i = [[CCIncident alloc] initWithDescription:[d objectForKey:@"description"] 
 										   andImage:nil 
 											 andLat:[[d objectForKey:@"latitude"] doubleValue]  
 											 andLon:[[d objectForKey:@"longitude"] doubleValue]
 									   andImageLink:[d objectForKey:@"image"]];
-		[incidents addObject:i];
-		CCLOG(@"%@",i);
+		[incidents addObject:i];		
 		[i release], i=nil;
 	}
-	
-	return incidents;	
+	return incidents;
 }
 
 + (NSArray*)fetchIncidentsAround:(CLLocationCoordinate2D)location withLonDelta:(double)lonDelta andLatDelta:(double)latDelta {
@@ -181,8 +191,8 @@
 	NSData* responseData = [CCIncident synchronousSendURLRequest:request];
 	NSString *r = [[NSString alloc] initWithData:responseData 
 										encoding:NSUTF8StringEncoding];
-	CCLOG(@"response data: %@", r);	
-	return [CCIncident convertToIncidents:r];
+
+	return [self convertToIncidents:r];
 }
 
 + (void)testFetch {
@@ -192,8 +202,12 @@
 	NSData* responseData = [CCIncident synchronousSendURLRequest:request];
 	NSString *r = [[NSString alloc] initWithData:responseData 
 										encoding:NSUTF8StringEncoding];
-//	CCLOG(@"response data: %@", r);	
-//	CCLOG(@"test fetch parsed data: %@", [CCIncident convertToIncidents:r]);
+	
+	NSArray* incidents = [self convertToIncidents:r];
+
+//	for (CCIncident *i in incidents) {
+//		CCLOG(@"%@", i);
+//	}
 }
 
 @end

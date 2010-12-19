@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CCProgressCallbackProtocol.h"
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @class CCIncident;
 
@@ -17,7 +18,7 @@
 - (void)incidentImageFetchFailed:(CCIncident*)incident;
 @end
 
-@interface CCIncident : NSObject {
+@interface CCIncident : NSObject <MKAnnotation> {
 	NSString* text;
 	NSString* user;
 	UIImage* image;
