@@ -12,13 +12,14 @@
 
 @class CCPostView;
 
-@interface CCNearIncidentsMapView : UIViewController {
+@interface CCNearIncidentsMapView : UIViewController <MKMapViewDelegate> {
 	IBOutlet MKMapView *mapView;
 	IBOutlet UIButton *closeButton;
 	CCPostView *postView;
 	
 	CLLocation *location;
 	BOOL displayedForRotation;
+	NSArray *incidents;
 }
 
 @property (readwrite, retain) CCPostView *postView;

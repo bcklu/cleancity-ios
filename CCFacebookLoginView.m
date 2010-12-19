@@ -58,7 +58,7 @@
 - (IBAction) login {
 	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
 	[self dismissModalViewControllerAnimated:NO];
-	[facebook authorize:nil delegate:self];
+	[facebook authorize:[NSArray arrayWithObject:@"offline_access"] delegate:self];
 }
 	
 

@@ -76,4 +76,10 @@
 	}
 }
 
+#pragma mark MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated {
+	incidents = [CCIncident fetchIncidentsAround:mv.region.center withLonDelta:mv.region.span.longitudeDelta andLatDelta:mv.region.span.latitudeDelta];
+}
+
 @end
