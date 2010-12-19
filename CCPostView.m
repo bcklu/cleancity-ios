@@ -35,18 +35,55 @@
 	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
 		[facebook authorize:[NSArray arrayWithObject:@"offline_access"] delegate:self];
 	}
+
+	UIImageView *navbarimg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar"]];
 	
-	[CCIncident testFetch];
+	[navbar addSubview:navbarimg];
+	[navbar sendSubviewToBack:navbarimg];
+	
+	map = [[CCNearIncidentsMapView alloc] init];
+	map.postView = self;
+	
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	static BOOL firstLaunch = YES;
+	
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"] && firstLaunch) {
+		CCFacebookLoginView *fblogin = [[CCFacebookLoginView alloc] init];
+		[self presentModalViewController:fblogin animated:NO];
+		firstLaunch = NO;
+	}
+	
+//	[CCIncident testFetch];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+		[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+		map.displayedForRotation = YES;
+		[self showMapView];
+	} else {
+		[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+		if (map.displayedForRotation) {
+			[self closeMapView];
+			map.displayedForRotation = NO;
+		}
+		
+	} 
 }
 
 
-/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	return YES;
+	
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+		// return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -117,6 +154,33 @@
 	[imageSourceChooser showInView:self.view];
 }
 
+- (IBAction) showMapView {
+	
+	if (!map) {
+		map = [[CCNearIncidentsMapView alloc] init];
+	}
+	
+	map.view.frame = CGRectMake(0, 0, 320, 480);
+	map.view.alpha = 0;
+	[UIView animateWithDuration:0.5 animations:^(void){
+		map.view.alpha = 1;
+	}];
+	
+	[self.view addSubview:map.view];
+	[comment resignFirstResponder];
+	[map viewWillAppear:YES];
+}
+
+- (void) closeMapView {
+	self.view.frame = CGRectMake(0, 20, 320, 460);
+	[comment becomeFirstResponder];
+	[UIView animateWithDuration:0.5 animations:^(void){
+		map.view.alpha = 0;
+	} completion:^(BOOL x){
+		[map.view removeFromSuperview];
+	}];
+}
+
 #pragma mark UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -150,8 +214,6 @@
 		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
 		[pickedImagePreview addGestureRecognizer:tap];
 		pickedImagePreview.userInteractionEnabled = YES;
-		//[self.view addSubview:pickedImagePreview];
-//		[self.view bringSubviewToFront:pickedImagePreview];
 	}
 	
 	[self.view addSubview:pickedImagePreview];
@@ -168,7 +230,10 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	[location release];
 	location = [newLocation retain];
-	CCLOG(@"Got location %@", location);
+	if (map) {
+		map.location = location;
+	}
+		//	CCLOG(@"Got location %@", location);
 }
 
 #pragma mark CCProgressCallbackProtocol
@@ -197,13 +262,29 @@
 	static BOOL zoomed = NO;
 	if (zoomed) {
 		[self greyOutBackground:NO];
+		
 		[UIView animateWithDuration:0.5 animations:^(void){
 			pickedImagePreview.frame = CGRectMake(20, 200, 30, 30);
+			[[self.view viewWithTag:33] setAlpha:0];
+			[[self.view viewWithTag:33] setFrame:CGRectMake(4, 184, 31, 31)];
+		} completion:^(BOOL finished) {
+			[[self.view viewWithTag:33] removeFromSuperview];
 		}];
 	} else {
 		[self greyOutBackground:YES];
+		UIImageView *closeButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close_button"]];
+		closeButton.alpha = 0;
+		closeButton.frame = CGRectMake(4, 184, 31, 31);
+		closeButton.tag = 33;
+		closeButton.userInteractionEnabled = YES;
+		
+		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
+		[closeButton addGestureRecognizer:tap];
+		[self.view addSubview:closeButton];
 		[UIView animateWithDuration:0.5 animations:^(void){
 			pickedImagePreview.frame = CGRectMake(70, 60, 170, 170);
+			closeButton.alpha = 1;
+			closeButton.frame = CGRectMake(54, 44, 31, 31);
 		}];	
 	}
 	
@@ -219,6 +300,7 @@
 		black.tag = 42;
 		[self.view addSubview:black];
 		[self.view bringSubviewToFront:pickedImagePreview];
+		[self.view bringSubviewToFront:[self.view viewWithTag:33]];
 		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(void){
 			black.alpha = 0.5;
 		} completion:nil];
