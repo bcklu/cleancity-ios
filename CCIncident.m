@@ -23,7 +23,7 @@
 + (NSArray*)convertToIncidents:(NSString*)JSONString;
 
 @property (assign) NSObject<CCProgressCallbackProtocol>* callback;
-@property (retain,nonatomic) NSString* imageLink;
+
 
 @end
 
@@ -66,10 +66,6 @@
 	}
 	
 	return self;
-}
-
-- (NSString*)description {
-	return [NSString stringWithFormat:@"Incident '%@' at (%d, %d) with image '%@'.", self.text, self.latitude, self.longitude, self.imageLink];
 }
 
 - (void)dealloc {	
@@ -208,6 +204,8 @@
 //	for (CCIncident *i in incidents) {
 //		CCLOG(@"%@", i);
 //	}
+//	CCLOG(@"%@", [incidents objectAtIndex:1]);
+//	CCLOG(@"%d", [incidents count]);
 }
 
 @end

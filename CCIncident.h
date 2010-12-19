@@ -35,7 +35,7 @@
 @property (retain,nonatomic) UIImage* image;
 @property (assign) double latitude;
 @property (assign) double longitude;
-
+@property (retain,nonatomic) NSString* imageLink;
 @property (assign) NSObject<CCIncidentDelegate>* delegate;
 
 - (id)initWithDescription:(NSString*)desc andImage:(UIImage*)img andLat:(double)latitude andLon:(double)longitude;
