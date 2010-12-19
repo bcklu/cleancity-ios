@@ -4,7 +4,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {810, 468}}";
 			sepNavSelRange = "{934, 0}";
-			sepNavVisRange = "{37, 904}";
+			sepNavVisRange = "{20, 921}";
 			sepNavWindowFrame = "{{171, 131}, {750, 558}}";
 		};
 	};
@@ -294,6 +294,16 @@
 			80B4746612BE3E9900F86565 /* XCBuildMessageTextBookmark */ = 80B4746612BE3E9900F86565 /* XCBuildMessageTextBookmark */;
 			80B4746712BE3E9900F86565 /* PBXTextBookmark */ = 80B4746712BE3E9900F86565 /* PBXTextBookmark */;
 			80B4746A12BE3EB400F86565 /* PBXTextBookmark */ = 80B4746A12BE3EB400F86565 /* PBXTextBookmark */;
+			80B4746D12BE3EF100F86565 /* PBXBookmark */ = 80B4746D12BE3EF100F86565 /* PBXBookmark */;
+			80B4747412BE419D00F86565 /* PBXTextBookmark */ = 80B4747412BE419D00F86565 /* PBXTextBookmark */;
+			80B4747512BE419D00F86565 /* PBXTextBookmark */ = 80B4747512BE419D00F86565 /* PBXTextBookmark */;
+			80B4747612BE419D00F86565 /* PBXBookmark */ = 80B4747612BE419D00F86565 /* PBXBookmark */;
+			80B4747712BE419D00F86565 /* PBXTextBookmark */ = 80B4747712BE419D00F86565 /* PBXTextBookmark */;
+			80B4747A12BE419D00F86565 /* PBXTextBookmark */ = 80B4747A12BE419D00F86565 /* PBXTextBookmark */;
+			80B4747B12BE41DE00F86565 /* PBXBookmark */ = 80B4747B12BE41DE00F86565 /* PBXBookmark */;
+			80B4747E12BE41FF00F86565 /* PBXTextBookmark */ = 80B4747E12BE41FF00F86565 /* PBXTextBookmark */;
+			80B4748112BE41FF00F86565 /* PBXTextBookmark */ = 80B4748112BE41FF00F86565 /* PBXTextBookmark */;
+			80B4748212BE41FF00F86565 /* PBXTextBookmark */ = 80B4748212BE41FF00F86565 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 80B4727312BDFFEA00F86565 /* Source Control */;
 		userBuildSettings = {
@@ -756,7 +766,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 207";
 		rLen = 0;
-		rLoc = 7458;
+		rLoc = 7454;
 		rType = 0;
 		vrLen = 1071;
 		vrLoc = 5483;
@@ -766,7 +776,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 213";
 		rLen = 0;
-		rLoc = 8264;
+		rLoc = 8260;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 5483;
@@ -786,7 +796,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 210";
 		rLen = 0;
-		rLoc = 7716;
+		rLoc = 7712;
 		rType = 0;
 		vrLen = 1547;
 		vrLoc = 5919;
@@ -806,7 +816,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 239";
 		rLen = 0;
-		rLoc = 8889;
+		rLoc = 8885;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 5919;
@@ -826,7 +836,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 209";
 		rLen = 0;
-		rLoc = 7668;
+		rLoc = 7664;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 5919;
@@ -846,7 +856,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 221";
 		rLen = 0;
-		rLoc = 8226;
+		rLoc = 8222;
 		rType = 0;
 		vrLen = 1279;
 		vrLoc = 5726;
@@ -866,7 +876,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 242";
 		rLen = 0;
-		rLoc = 8886;
+		rLoc = 8882;
 		rType = 0;
 		vrLen = 1600;
 		vrLoc = 5983;
@@ -886,7 +896,7 @@
 		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
 		name = "CCPostView.m: 219";
 		rLen = 0;
-		rLoc = 8065;
+		rLoc = 8061;
 		rType = 0;
 		vrLen = 1338;
 		vrLoc = 5771;
@@ -910,9 +920,9 @@
 	};
 	80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 962}}";
-			sepNavSelRange = "{1076, 0}";
-			sepNavVisRange = "{704, 1126}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1040}}";
+			sepNavSelRange = "{1903, 0}";
+			sepNavVisRange = "{851, 1061}";
 			sepNavWindowFrame = "{{125, 173}, {750, 558}}";
 		};
 	};
@@ -970,7 +980,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 35";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 496;
@@ -980,7 +990,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 35";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1146;
 		vrLoc = 413;
@@ -990,7 +1000,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 35";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 413;
@@ -1030,7 +1040,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 35";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1159;
 		vrLoc = 410;
@@ -1040,7 +1050,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 36";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 410;
@@ -1050,7 +1060,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 36";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 410;
@@ -1110,7 +1120,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 36";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1042;
 		vrLoc = 790;
@@ -1120,7 +1130,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 0;
@@ -1130,7 +1140,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 45";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1312;
 		rType = 0;
 		vrLen = 1349;
 		vrLoc = 225;
@@ -1140,7 +1150,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 225;
@@ -1150,7 +1160,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 225;
@@ -1190,7 +1200,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 225;
@@ -1200,7 +1210,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 41";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 225;
@@ -1230,7 +1240,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 41";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 225;
@@ -1240,7 +1250,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 41";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1535;
 		vrLoc = 225;
@@ -1260,7 +1270,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 41";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 3;
@@ -1270,7 +1280,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 45";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1312;
 		rType = 0;
 		vrLen = 1293;
 		vrLoc = 147;
@@ -1300,7 +1310,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 46";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1312;
 		rType = 0;
 		vrLen = 1495;
 		vrLoc = 147;
@@ -1331,7 +1341,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 40;
+		rLoc = 39;
 		rType = 1;
 	};
 	80B4737E12BE21D800F86565 /* PBXTextBookmark */ = {
@@ -1339,7 +1349,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 589;
@@ -1379,7 +1389,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 589;
@@ -1419,7 +1429,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 812;
@@ -1429,7 +1439,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 46";
 		rLen = 0;
-		rLoc = 1345;
+		rLoc = 1308;
 		rType = 0;
 		vrLen = 1211;
 		vrLoc = 639;
@@ -1439,7 +1449,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 46";
 		rLen = 0;
-		rLoc = 1345;
+		rLoc = 1308;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 639;
@@ -1449,7 +1459,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 46";
 		rLen = 0;
-		rLoc = 1349;
+		rLoc = 1312;
 		rType = 0;
 		vrLen = 1212;
 		vrLoc = 639;
@@ -1509,7 +1519,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 73";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 814;
@@ -1684,6 +1694,13 @@
 		vrLen = 1321;
 		vrLoc = 1679;
 	};
+	80B473DB12BE377B00F86565 /* 86-camera@2x.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "86-camera@2x.png";
+		path = "/Users/lukas/Downloads/GlyphishProIcons/icons/86-camera@2x.png";
+		sourceTree = "<absolute>";
+	};
 	80B473E912BE389900F86565 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 80B473D912BE373800F86565 /* navbar.png */;
@@ -1741,7 +1758,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 73";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 814;
@@ -1751,7 +1768,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 75";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 858;
@@ -1775,7 +1792,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 72";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1317;
 		vrLoc = 814;
@@ -1815,7 +1832,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 682;
 		vrLoc = 1449;
@@ -1845,7 +1862,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 797;
@@ -1855,7 +1872,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 797;
@@ -1865,7 +1882,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 72";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 1145;
@@ -1875,7 +1892,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 797;
@@ -1905,7 +1922,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 72";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 1145;
@@ -1935,7 +1952,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 72";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 1145;
@@ -1955,7 +1972,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 72";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 801;
 		vrLoc = 1145;
@@ -2001,7 +2018,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 71";
 		rLen = 0;
-		rLoc = 1821;
+		rLoc = 1784;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 797;
@@ -2011,7 +2028,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 1010;
 		vrLoc = 677;
@@ -2021,7 +2038,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 666;
 		vrLoc = 1021;
@@ -2031,7 +2048,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 44";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1316;
 		rType = 0;
 		vrLen = 1013;
 		vrLoc = 674;
@@ -2061,7 +2078,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2091,7 +2108,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2131,7 +2148,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2151,7 +2168,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2171,7 +2188,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2191,7 +2208,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2211,7 +2228,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 67";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1018;
@@ -2261,7 +2278,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 68";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 999;
@@ -2291,7 +2308,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 39";
 		rLen = 0;
-		rLoc = 1160;
+		rLoc = 1123;
 		rType = 0;
 		vrLen = 1305;
 		vrLoc = 46;
@@ -2301,7 +2318,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 70";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1785;
 		rType = 0;
 		vrLen = 760;
 		vrLoc = 999;
@@ -2323,7 +2340,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 39";
 		rLen = 0;
-		rLoc = 1160;
+		rLoc = 1123;
 		rType = 0;
 		vrLen = 1305;
 		vrLoc = 46;
@@ -2333,7 +2350,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 38";
 		rLen = 0;
-		rLoc = 1076;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 1126;
 		vrLoc = 704;
@@ -2353,7 +2370,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 38";
 		rLen = 0;
-		rLoc = 1076;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 1126;
 		vrLoc = 704;
@@ -2383,7 +2400,7 @@
 		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
 		name = "CCNearIncidentsMapView.m: 37";
 		rLen = 0;
-		rLoc = 1162;
+		rLoc = 1125;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 589;
@@ -2417,6 +2434,88 @@
 		vrLen = 1575;
 		vrLoc = 3205;
 	};
+	80B4746D12BE3EF100F86565 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 02BA907112BCB84900D1819D /* CCIncident.h */;
+	};
+	80B4747412BE419D00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
+		name = "CCPostView.m: 165";
+		rLen = 0;
+		rLoc = 4877;
+		rType = 0;
+		vrLen = 1575;
+		vrLoc = 3205;
+	};
+	80B4747512BE419D00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 96AE221612BD0987007AE77B /* CCDefinedConstants.h */;
+		name = "CCDefinedConstants.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	80B4747612BE419D00F86565 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 80B4746E12BE413C00F86565 /* 86-camera@2x.png */;
+	};
+	80B4747712BE419D00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
+		name = "CCNearIncidentsMapView.m: 76";
+		rLen = 0;
+		rLoc = 1903;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 847;
+	};
+	80B4747A12BE419D00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02BA907112BCB84900D1819D /* CCIncident.h */;
+		name = "CCIncident.h: 33";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 921;
+		vrLoc = 20;
+	};
+	80B4747B12BE41DE00F86565 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
+	};
+	80B4747E12BE41FF00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 80B4730A12BE0F5800F86565 /* CCNearIncidentsMapView.m */;
+		name = "CCNearIncidentsMapView.m: 76";
+		rLen = 0;
+		rLoc = 1903;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 851;
+	};
+	80B4748112BE41FF00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */;
+		name = "CCPostView.m: 229";
+		rLen = 0;
+		rLoc = 6927;
+		rType = 0;
+		vrLen = 1094;
+		vrLoc = 6116;
+	};
+	80B4748212BE41FF00F86565 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02BA907112BCB84900D1819D /* CCIncident.h */;
+		name = "CCIncident.h: 33";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 921;
+		vrLoc = 20;
+	};
 	96ABA46112BCC444007FF3A5 /* CCPostView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1314, 624}}";
@@ -2426,9 +2525,16 @@
 	};
 	96ABA46212BCC444007FF3A5 /* CCPostView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2462, 4082}}";
-			sepNavSelRange = "{4877, 0}";
-			sepNavVisRange = "{3205, 1575}";
+			sepNavIntBoundsRect = "{{0, 0}, {2126, 4134}}";
+			sepNavSelRange = "{6927, 0}";
+			sepNavVisRange = "{6116, 1094}";
+		};
+	};
+	96AE221612BD0987007AE77B /* CCDefinedConstants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {648, 575}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 344}";
 		};
 	};
 }

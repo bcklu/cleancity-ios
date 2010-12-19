@@ -226,7 +226,7 @@
 	if (map) {
 		map.location = location;
 	}
-		//	CCLOG(@"Got location %@", location);
+	CCLOG(@"Got location %@", location);
 }
 
 #pragma mark CCProgressCallbackProtocol

@@ -33,11 +33,10 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-	MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
-	[mapView setRegion:region animated:NO];
-	CCLOG(@"%d", displayedForRotation);
 	if (displayedForRotation) closeButton.hidden = YES;
 	else closeButton.hidden = NO;
+	MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+	[mapView setRegion:region animated:NO];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -68,6 +67,13 @@
 
 - (IBAction) closeMap {
 	[postView closeMapView];
+}
+
+- (void)setLocation:(CLLocation *)loc {
+	if (location != loc) {
+		[location release];
+		location = [loc retain];
+	}
 }
 
 @end
