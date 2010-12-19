@@ -33,11 +33,10 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-	MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
-	[mapView setRegion:region animated:NO];
-	CCLOG(@"%d", displayedForRotation);
 	if (displayedForRotation) closeButton.hidden = YES;
 	else closeButton.hidden = NO;
+	MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
+	[mapView setRegion:region animated:NO];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -64,10 +63,43 @@
     [super dealloc];
 }
 
+- (void)updateMap {
+//	NSMutableArray *anotations = [[NSMutableArray alloc] initWithArray:[mapView annotations]];
+//	[anotations remo:[mapView annotationsInMapRect:[mapView visibleMapRect]]];
+//	[mapView removeAnnotations:anotations];
+//	[anotations release];
+	
+	incidents = [CCIncident fetchIncidentsAround:mapView.region.center withLonDelta:mapView.region.span.longitudeDelta andLatDelta:mapView.region.span.latitudeDelta];
+	CCLOG(@"\n%@, Position: %f", incidents, mapView.region.center.latitude);
+	[mapView addAnnotations:incidents];
+//	[reloadTimer invalidate];
+//	[reloadTimer release];
+//	reloadTimer = nil;
+}
+
 #pragma mark Interface Builder
 
 - (IBAction) closeMap {
+
 	[postView closeMapView];
+}
+
+- (void)setLocation:(CLLocation *)loc {
+	if (location != loc) {
+		[location release];
+		location = [loc retain];
+	}
+}
+
+#pragma mark MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated {
+//	if (reloadTimer) {
+//		[reloadTimer invalidate];
+//		[reloadTimer release];
+//	}
+//	reloadTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(updateMap) userInfo:nil repeats:NO];
+	[self updateMap];
 }
 
 @end

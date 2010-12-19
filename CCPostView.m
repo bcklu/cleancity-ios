@@ -30,11 +30,6 @@
 	locationManager.delegate = self;
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[locationManager startUpdatingLocation];
-	
-	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
-	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
-		[facebook authorize:[NSArray arrayWithObject:@"offline_access"] delegate:self];
-	}
 
 	UIImageView *navbarimg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar"]];
 	
@@ -233,7 +228,7 @@
 	if (map) {
 		map.location = location;
 	}
-		//	CCLOG(@"Got location %@", location);
+	CCLOG(@"Got location %@", location);
 }
 
 #pragma mark CCProgressCallbackProtocol

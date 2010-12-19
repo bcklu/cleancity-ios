@@ -49,6 +49,7 @@
 		80B4741712BE3AB100F86565 /* schandfleck-icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B4741212BE3AB100F86565 /* schandfleck-icon_58.png */; };
 		80B4741812BE3AB100F86565 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B4741312BE3AB100F86565 /* Icon@2x.png */; };
 		80B4741912BE3AB100F86565 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 80B4741412BE3AB100F86565 /* iTunesArtwork */; };
+		80B4746F12BE413C00F86565 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B4746E12BE413C00F86565 /* 86-camera@2x.png */; };
 		96ABA46412BCC444007FF3A5 /* CCPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */; };
 		96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA46312BCC444007FF3A5 /* CCPostView.xib */; };
 		96ABA51D12BCEC24007FF3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */; };
@@ -134,6 +135,7 @@
 		80B4741212BE3AB100F86565 /* schandfleck-icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schandfleck-icon_58.png"; sourceTree = "<group>"; };
 		80B4741312BE3AB100F86565 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		80B4741412BE3AB100F86565 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		80B4746E12BE413C00F86565 /* 86-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CleanCity-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CleanCity-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		96ABA46112BCC444007FF3A5 /* CCPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPostView.h; sourceTree = "<group>"; };
 		96ABA46212BCC444007FF3A5 /* CCPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPostView.m; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		80B472DB12BE08FC00F86565 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				80B4746E12BE413C00F86565 /* 86-camera@2x.png */,
 				80B473E112BE380E00F86565 /* 103-map.png */,
 				80B473E212BE380E00F86565 /* 103-map@2x.png */,
 				80B473DD12BE379300F86565 /* 07-map-marker.png */,
@@ -516,6 +519,7 @@
 				80B4741712BE3AB100F86565 /* schandfleck-icon_58.png in Resources */,
 				80B4741812BE3AB100F86565 /* Icon@2x.png in Resources */,
 				80B4741912BE3AB100F86565 /* iTunesArtwork in Resources */,
+				80B4746F12BE413C00F86565 /* 86-camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

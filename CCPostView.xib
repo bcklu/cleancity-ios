@@ -83,10 +83,10 @@
 									<reference key="IBUINavigationItem" ref="958280130"/>
 								</object>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="76573095">
+									<string key="IBUITitle">Send</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-									<int key="IBUIStyle">1</int>
+									<int key="IBUIStyle">2</int>
 									<reference key="IBUINavigationItem" ref="958280130"/>
-									<int key="IBUISystemItemIdentifier">3</int>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
