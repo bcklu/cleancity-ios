@@ -25,7 +25,7 @@
 
 	self.postViewController = postView;
 	[postView release];
-	[self.window addSubview:postView.view];
+	[self.window addSubview:self.postViewController.view];
 
     [self.window makeKeyAndVisible];
     return YES;
@@ -36,7 +36,7 @@
 	[facebook handleOpenURL:url];
 	[facebook requestWithGraphPath:@"me" andDelegate:self];
 	[[NSUserDefaults standardUserDefaults] setObject:facebook.accessToken forKey:@"accesstoken"];
-		CCLOG(@"Got Token: %@", facebook.accessToken);
+	CCLOG(@"Got Token: %@", facebook.accessToken);
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
 	if (facebook.accessToken) {

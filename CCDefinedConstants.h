@@ -8,6 +8,6 @@
 
 #define FB_APP_ID @"171571639549640"
 
-#define kRestSendIncident @"http://cleancity.dyndns.org/1/incident_reports"
-#define kRestFetchIncidents @""
+#define kRestIncidents @"http://schandfleck.in/1/incident_reports"
+#define kSiteUrl @"http://schandfleck.in/"
 #define kImageTargetSize CGSizeMake(640.0f, 480.0f)

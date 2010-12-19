@@ -31,6 +31,11 @@
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[locationManager startUpdatingLocation];
 	
+	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
+		[facebook authorize:[NSArray arrayWithObject:@"offline_access"] delegate:self];
+	}
+
 	UIImageView *navbarimg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar"]];
 	
 	[navbar addSubview:navbarimg];
@@ -51,6 +56,8 @@
 		[self presentModalViewController:fblogin animated:NO];
 		firstLaunch = NO;
 	}
+	
+	[CCIncident testFetch];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
