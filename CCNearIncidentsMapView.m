@@ -63,9 +63,24 @@
     [super dealloc];
 }
 
+- (void)updateMap {
+//	NSMutableArray *anotations = [[NSMutableArray alloc] initWithArray:[mapView annotations]];
+//	[anotations remo:[mapView annotationsInMapRect:[mapView visibleMapRect]]];
+//	[mapView removeAnnotations:anotations];
+//	[anotations release];
+	
+	incidents = [CCIncident fetchIncidentsAround:mapView.region.center withLonDelta:mapView.region.span.longitudeDelta andLatDelta:mapView.region.span.latitudeDelta];
+	CCLOG(@"\n%@, Position: %f", incidents, mapView.region.center.latitude);
+	[mapView addAnnotations:incidents];
+//	[reloadTimer invalidate];
+//	[reloadTimer release];
+//	reloadTimer = nil;
+}
+
 #pragma mark Interface Builder
 
 - (IBAction) closeMap {
+
 	[postView closeMapView];
 }
 
@@ -79,9 +94,12 @@
 #pragma mark MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated {
-	incidents = [CCIncident fetchIncidentsAround:mapView.region.center withLonDelta:mapView.region.span.longitudeDelta andLatDelta:mapView.region.span.latitudeDelta];
-	CCLOG(@"%@, Position: %f", incidents, mapView.region.center.latitude);
-	[mapView addAnnotations:incidents];
+//	if (reloadTimer) {
+//		[reloadTimer invalidate];
+//		[reloadTimer release];
+//	}
+//	reloadTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(updateMap) userInfo:nil repeats:NO];
+	[self updateMap];
 }
 
 @end

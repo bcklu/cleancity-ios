@@ -20,6 +20,7 @@
 	CLLocation *location;
 	BOOL displayedForRotation;
 	NSArray *incidents;
+	NSTimer *reloadTimer;
 }
 
 @property (readwrite, retain) CCPostView *postView;
