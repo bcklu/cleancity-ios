@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>80B474B412BE461800F86565</string>
+						<string>80B474FA12BE4A4B00F86565</string>
 						<key>history</key>
 						<array>
 							<string>80B474A712BE45DB00F86565</string>
@@ -256,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>80B474B712BE461800F86565</string>
+						<string>80B474FB12BE4A4B00F86565</string>
 						<key>history</key>
 						<array>
 							<string>80B4749412BE448E00F86565</string>
@@ -357,7 +357,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>17</integer>
 									<integer>7</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -383,7 +383,7 @@
 							<real>264</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>125 85 1092 693 0 0 1280 778 </string>
+						<string>126 85 1092 693 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -401,7 +401,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCPostView.m</string>
+								<string>CCNearIncidentsMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -409,18 +409,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCPostView.m</string>
+										<string>CCNearIncidentsMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>80B474AF12BE461800F86565</string>
+										<string>80B474F912BE4A4B00F86565</string>
 										<key>history</key>
 										<array>
 											<string>80B4729B12BE05E500F86565</string>
 											<string>80B472AE12BE06DB00F86565</string>
 											<string>80B472E112BE0C7600F86565</string>
 											<string>80B472E212BE0C7600F86565</string>
-											<string>80B4733A12BE1D3300F86565</string>
 											<string>80B4734E12BE1EC500F86565</string>
 											<string>80B473E912BE389900F86565</string>
 											<string>80B473EB12BE389900F86565</string>
@@ -436,9 +435,10 @@
 											<string>80B4747612BE419D00F86565</string>
 											<string>80B474AA12BE461800F86565</string>
 											<string>80B474AB12BE461800F86565</string>
-											<string>80B474AC12BE461800F86565</string>
-											<string>80B474AD12BE461800F86565</string>
-											<string>80B474AE12BE461800F86565</string>
+											<string>80B474F112BE4A2100F86565</string>
+											<string>80B474F212BE4A2100F86565</string>
+											<string>80B474F712BE4A4B00F86565</string>
+											<string>80B474F812BE4A4B00F86565</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -452,7 +452,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {806, 647}}</string>
 								<key>RubberWindowFrame</key>
-								<string>125 85 1092 693 0 0 1280 778 </string>
+								<string>126 85 1092 693 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -472,7 +472,7 @@
 								<key>Frame</key>
 								<string>{{0, 652}, {806, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>125 85 1092 693 0 0 1280 778 </string>
+								<string>126 85 1092 693 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -636,15 +636,18 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>80B474F612BE4A2100F86565</string>
+		<string>80B474DA12BE498F00F86565</string>
+		<string>80B474DB12BE498F00F86565</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>80B4727112BDFFEA00F86565</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>80B474B512BE461800F86565</string>
 		<string>80B474B212BE461800F86565</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/lukas/Documents/cleancity-ios/CleanCity.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>125 85 1092 693 0 0 1280 778 </string>
+	<string>126 85 1092 693 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

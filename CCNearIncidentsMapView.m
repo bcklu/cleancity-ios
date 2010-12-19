@@ -79,7 +79,9 @@
 #pragma mark MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated {
-	incidents = [CCIncident fetchIncidentsAround:mv.region.center withLonDelta:mv.region.span.longitudeDelta andLatDelta:mv.region.span.latitudeDelta];
+	incidents = [CCIncident fetchIncidentsAround:mapView.region.center withLonDelta:mapView.region.span.longitudeDelta andLatDelta:mapView.region.span.latitudeDelta];
+	CCLOG(@"%@, Position: %f", incidents, mapView.region.center.latitude);
+	[mapView addAnnotations:incidents];
 }
 
 @end
