@@ -31,9 +31,18 @@
 	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[locationManager startUpdatingLocation];
 	
-	Facebook* facebook = [[Facebook alloc] initWithAppId:FB_APP_ID];
-	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
-		[facebook authorize:nil delegate:self];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	
+	static BOOL firstLaunch = YES;
+	
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userid"] && firstLaunch) {
+		CCFacebookLoginView *fblogin = [[CCFacebookLoginView alloc] init];
+		[self presentModalViewController:fblogin animated:NO];
+		firstLaunch = NO;
 	}
 }
 
@@ -148,8 +157,6 @@
 		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
 		[pickedImagePreview addGestureRecognizer:tap];
 		pickedImagePreview.userInteractionEnabled = YES;
-		//[self.view addSubview:pickedImagePreview];
-//		[self.view bringSubviewToFront:pickedImagePreview];
 	}
 	
 	[self.view addSubview:pickedImagePreview];
@@ -166,7 +173,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	[location release];
 	location = [newLocation retain];
-	CCLOG(@"Got location %@", location);
+		//	CCLOG(@"Got location %@", location);
 }
 
 #pragma mark CCProgressCallbackProtocol
@@ -195,13 +202,29 @@
 	static BOOL zoomed = NO;
 	if (zoomed) {
 		[self greyOutBackground:NO];
+		
 		[UIView animateWithDuration:0.5 animations:^(void){
 			pickedImagePreview.frame = CGRectMake(20, 200, 30, 30);
+			[[self.view viewWithTag:33] setAlpha:0];
+			[[self.view viewWithTag:33] setFrame:CGRectMake(4, 184, 31, 31)];
+		} completion:^(BOOL finished) {
+			[[self.view viewWithTag:33] removeFromSuperview];
 		}];
 	} else {
 		[self greyOutBackground:YES];
+		UIImageView *closeButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close_button"]];
+		closeButton.alpha = 0;
+		closeButton.frame = CGRectMake(4, 184, 31, 31);
+		closeButton.tag = 33;
+		closeButton.userInteractionEnabled = YES;
+		
+		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
+		[closeButton addGestureRecognizer:tap];
+		[self.view addSubview:closeButton];
 		[UIView animateWithDuration:0.5 animations:^(void){
 			pickedImagePreview.frame = CGRectMake(70, 60, 170, 170);
+			closeButton.alpha = 1;
+			closeButton.frame = CGRectMake(54, 44, 31, 31);
 		}];	
 	}
 	
@@ -217,6 +240,7 @@
 		black.tag = 42;
 		[self.view addSubview:black];
 		[self.view bringSubviewToFront:pickedImagePreview];
+		[self.view bringSubviewToFront:[self.view viewWithTag:33]];
 		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^(void){
 			black.alpha = 0.5;
 		} completion:nil];

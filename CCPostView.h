@@ -13,9 +13,10 @@
 #import "Facebook.h"
 #import "CCDefinedConstants.h"
 #import "CCAlertView.h"
+#import "CCFacebookLoginView.h"
 
 
-@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, FBSessionDelegate, CCProgressCallbackProtocol> {
+@interface CCPostView : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, CCProgressCallbackProtocol> {
 	
 	IBOutlet UITextView *comment;
 

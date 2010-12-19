@@ -33,6 +33,9 @@
 		2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E32C111B888700E27156 /* AppDelegate_iPad.m */; };
 		2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_iPad.xib */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		80B4727B12BE034C00F86565 /* CCFacebookLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B4727912BE034C00F86565 /* CCFacebookLoginView.m */; };
+		80B4727C12BE034C00F86565 /* CCFacebookLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B4727A12BE034C00F86565 /* CCFacebookLoginView.xib */; };
+		80B472DD12BE090600F86565 /* close_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 80B472DC12BE090600F86565 /* close_button.png */; };
 		96ABA46412BCC444007FF3A5 /* CCPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABA46212BCC444007FF3A5 /* CCPostView.m */; };
 		96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96ABA46312BCC444007FF3A5 /* CCPostView.xib */; };
 		96ABA51D12BCEC24007FF3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */; };
@@ -100,6 +103,10 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* CleanCity_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanCity_Prefix.pch; sourceTree = "<group>"; };
+		80B4727812BE034C00F86565 /* CCFacebookLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFacebookLoginView.h; sourceTree = "<group>"; };
+		80B4727912BE034C00F86565 /* CCFacebookLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCFacebookLoginView.m; sourceTree = "<group>"; };
+		80B4727A12BE034C00F86565 /* CCFacebookLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCFacebookLoginView.xib; sourceTree = "<group>"; };
+		80B472DC12BE090600F86565 /* close_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_button.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CleanCity-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CleanCity-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		96ABA46112BCC444007FF3A5 /* CCPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPostView.h; sourceTree = "<group>"; };
 		96ABA46212BCC444007FF3A5 /* CCPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPostView.m; sourceTree = "<group>"; };
@@ -180,6 +187,9 @@
 				96ABA46312BCC444007FF3A5 /* CCPostView.xib */,
 				02BA908312BCB92B00D1819D /* CCAlertView.h */,
 				02BA908412BCB92B00D1819D /* CCAlertView.m */,
+				80B4727812BE034C00F86565 /* CCFacebookLoginView.h */,
+				80B4727912BE034C00F86565 /* CCFacebookLoginView.m */,
+				80B4727A12BE034C00F86565 /* CCFacebookLoginView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,7 +302,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				96ABA54512BCF3F9007FF3A5 /* 86-camera.png */,
+				80B472DB12BE08FC00F86565 /* Images */,
 				96ABA53F12BCF358007FF3A5 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* CleanCity-Info.plist */,
 			);
@@ -336,6 +346,15 @@
 				96ABA51C12BCEC24007FF3A5 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80B472DB12BE08FC00F86565 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				80B472DC12BE090600F86565 /* close_button.png */,
+				96ABA54512BCF3F9007FF3A5 /* 86-camera.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		96AE21BC12BD071E007AE77B /* JSON */ = {
@@ -434,6 +453,8 @@
 				96ABA46512BCC444007FF3A5 /* CCPostView.xib in Resources */,
 				96ABA54112BCF358007FF3A5 /* Localizable.strings in Resources */,
 				96ABA54612BCF3F9007FF3A5 /* 86-camera.png in Resources */,
+				80B4727C12BE034C00F86565 /* CCFacebookLoginView.xib in Resources */,
+				80B472DD12BE090600F86565 /* close_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +492,7 @@
 				96AE21F812BD079F007AE77B /* FBDialog.m in Sources */,
 				02E3FA9312BD1AF50019754A /* UIImage+Extras.m in Sources */,
 				02E3FA9E12BD1BBD0019754A /* NSData+Base64.m in Sources */,
+				80B4727B12BE034C00F86565 /* CCFacebookLoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
