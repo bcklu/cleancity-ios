@@ -52,7 +52,7 @@
 		firstLaunch = NO;
 	}
 	
-	[CCIncident testFetch];
+//	[CCIncident testFetch];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
