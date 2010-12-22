@@ -65,6 +65,8 @@
 		96AE21F612BD079F007AE77B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE21EF12BD079F007AE77B /* Facebook.m */; };
 		96AE21F712BD079F007AE77B /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE21F212BD079F007AE77B /* FBLoginDialog.m */; };
 		96AE21F812BD079F007AE77B /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE21F412BD079F007AE77B /* FBDialog.m */; };
+		F64CDD2412C27A2300901916 /* KeyboardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F64CDD2212C27A2300901916 /* KeyboardBack.png */; };
+		F64CDD2512C27A2300901916 /* KeyboardBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,8 @@
 		96AE21F312BD079F007AE77B /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
 		96AE21F412BD079F007AE77B /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
 		96AE221612BD0987007AE77B /* CCDefinedConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefinedConstants.h; sourceTree = "<group>"; };
+		F64CDD2212C27A2300901916 /* KeyboardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardBack.png; sourceTree = "<group>"; };
+		F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyboardBack@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +390,8 @@
 		80B472DB12BE08FC00F86565 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F64CDD2212C27A2300901916 /* KeyboardBack.png */,
+				F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */,
 				80B4746E12BE413C00F86565 /* 86-camera@2x.png */,
 				80B473E112BE380E00F86565 /* 103-map.png */,
 				80B473E212BE380E00F86565 /* 103-map@2x.png */,
@@ -520,6 +526,8 @@
 				80B4741812BE3AB100F86565 /* Icon@2x.png in Resources */,
 				80B4741912BE3AB100F86565 /* iTunesArtwork in Resources */,
 				80B4746F12BE413C00F86565 /* 86-camera@2x.png in Resources */,
+				F64CDD2412C27A2300901916 /* KeyboardBack.png in Resources */,
+				F64CDD2512C27A2300901916 /* KeyboardBack@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

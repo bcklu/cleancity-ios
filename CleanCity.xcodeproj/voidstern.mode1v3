@@ -330,11 +330,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>F6646B4112C270740074549D</string>
+										<string>F64CDD1D12C278C600901916</string>
 										<key>history</key>
 										<array>
 											<string>F6646B3F12C270740074549D</string>
-											<string>F6646B4012C270740074549D</string>
+											<string>F6646B4212C272690074549D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -346,14 +346,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {2251, 787}}</string>
+								<string>{{0, 0}, {2251, 779}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 56 2560 1362 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>787pt</string>
+							<string>779pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -366,14 +366,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 792}, {2251, 529}}</string>
+								<string>{{0, 784}, {2251, 537}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 56 2560 1362 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>529pt</string>
+							<string>537pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -392,9 +392,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F6646AE412C2661B0074549D</string>
+				<string>F64CDD1E12C278C600901916</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>F6646AE512C2661B0074549D</string>
+				<string>F64CDD1F12C278C600901916</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -532,13 +532,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2AF069F1E9B00FABCE6</string>
-		<string>F6646B0212C269DE0074549D</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>F6E733EB12BE8F960013C99E</string>
-		<string>F6646B0312C269DE0074549D</string>
-		<string>F6646B0F12C26A360074549D</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/voidstern/Dropbox/Development/Github/cleancity-ios/CleanCity.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -563,7 +557,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCPostView.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -580,8 +574,6 @@
 							<string>356pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -621,7 +613,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>F6E733EB12BE8F960013C99E</string>
-				<string>F6646AE612C2661B0074549D</string>
+				<string>F64CDD2012C278C600901916</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -634,7 +626,7 @@
 			<key>WindowToolGUID</key>
 			<string>F6E733EB12BE8F960013C99E</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
