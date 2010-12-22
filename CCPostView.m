@@ -7,6 +7,8 @@
 //
 
 #import "CCPostView.h"
+#import "NSData+Base64.h"
+#import "UIImage+Extras.h"
 
 @implementation CCPostView
 
@@ -213,7 +215,7 @@
 	
 	[self.view addSubview:pickedImagePreview];
 	[self.view bringSubviewToFront:pickedImagePreview];	
-	pickedImagePreview.image = pickedImage;
+	pickedImagePreview.image = [pickedImage imageByScalingProportionallyToSize:CGSizeMake(200, 200)];
 	
 	[self dismissModalViewControllerAnimated:YES];
 	CCLOG(@"Selected Image");	
