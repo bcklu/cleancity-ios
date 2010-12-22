@@ -150,16 +150,16 @@
 	};
 	96ABA46112BCC444007FF3A5 /* CCPostView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2190, 732}}";
+			sepNavIntBoundsRect = "{{0, 0}, {2190, 724}}";
 			sepNavSelRange = "{857, 0}";
 			sepNavVisRange = "{0, 1198}";
 		};
 	};
 	96ABA46212BCC444007FF3A5 /* CCPostView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2462, 4329}}";
-			sepNavSelRange = "{5963, 0}";
-			sepNavVisRange = "{2567, 1324}";
+			sepNavIntBoundsRect = "{{0, 0}, {2068, 4186}}";
+			sepNavSelRange = "{1113, 0}";
+			sepNavVisRange = "{0, 2246}";
 		};
 	};
 	F64CDD1D12C278C600901916 /* PBXTextBookmark */ = {
@@ -243,7 +243,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
