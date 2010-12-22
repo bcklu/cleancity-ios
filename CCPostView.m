@@ -7,8 +7,12 @@
 //
 
 #import "CCPostView.h"
+#import "NSData+Base64.h"
+#import "UIImage+Extras.h"
 
 @implementation CCPostView
+
+@synthesize commenttext;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -39,6 +43,7 @@
 	map = [[CCNearIncidentsMapView alloc] init];
 	map.postView = self;
 	
+	if (commenttext) comment.text = self.commenttext;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -131,7 +136,7 @@
 		[incident send:self];
 		[incident release];
 	} else {
-			// Error
+			//TODO: Present Error
 	}
 
 }
@@ -193,6 +198,11 @@
 	else if (buttonIndex == 1 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
 	else return;
 	
+
+	self.commenttext = comment.text;
+	
+	// CCLOG(@"Saving comment text: %@", self.commenttext);
+	
 	[self presentModalViewController:imagePicker animated:YES];
 }
 
@@ -213,7 +223,7 @@
 	
 	[self.view addSubview:pickedImagePreview];
 	[self.view bringSubviewToFront:pickedImagePreview];	
-	pickedImagePreview.image = pickedImage;
+	pickedImagePreview.image = [pickedImage imageByScalingProportionallyToSize:CGSizeMake(200, 200)];
 	
 	[self dismissModalViewControllerAnimated:YES];
 	CCLOG(@"Selected Image");	
