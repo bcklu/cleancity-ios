@@ -28,10 +28,13 @@
 	UIImageView *pickedImagePreview;
 	CCAlertView *alert;
 	CCNearIncidentsMapView *map;
+	NSString *commenttext;
 	
 	CLLocationManager *locationManager;
 	CLLocation *location;
 }
+
+@property (readwrite, retain) NSString *commenttext;
 
 - (IBAction) cancel;
 - (IBAction) post;
