@@ -14,21 +14,11 @@
 
 @synthesize commenttext;
 
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[comment becomeFirstResponder];
+	//[comment becomeFirstResponder];
 	
 	locationManager = [[CLLocationManager alloc] init];
 	locationManager.delegate = self;
@@ -57,7 +47,6 @@
 		firstLaunch = NO;
 	}
 	
-//	[CCIncident testFetch];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
@@ -71,7 +60,6 @@
 			[self closeMapView];
 			map.displayedForRotation = NO;
 		}
-		
 	} 
 }
 
@@ -79,9 +67,6 @@
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
-	
-    // Return YES for supported orientations
-		// return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 
@@ -91,13 +76,6 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 
 - (void)dealloc {
 	[comment release];
@@ -145,9 +123,17 @@
 	if (!imageSourceChooser) {
 		
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), NSLocalizedString(@"IMAGE_SOURCE_CAMERA", @""), nil];
+					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") 
+																	 delegate:self 
+															cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") 
+													   destructiveButtonTitle:nil 
+															otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), NSLocalizedString(@"IMAGE_SOURCE_CAMERA", @""), nil];
 		} else {
-					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), nil];
+					imageSourceChooser = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"IMAGE_SOURCE_TITLE", @"") 
+																	 delegate:self
+															cancelButtonTitle:NSLocalizedString(@"IMAGE_SOURCE_CANCEL", @"") 
+													   destructiveButtonTitle:nil 
+															otherButtonTitles:NSLocalizedString(@"IMAGE_SOURCE_LIBRARY", @""), nil];
 		}
 	}
 	
@@ -164,6 +150,7 @@
 	map.view.alpha = 0;
 	[UIView animateWithDuration:0.5 animations:^(void){
 		map.view.alpha = 1;
+		[map viewDidAppear:YES];
 	}];
 	
 	[self.view addSubview:map.view];
@@ -197,11 +184,8 @@
 	if (buttonIndex == 0) imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 	else if (buttonIndex == 1 && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
 	else return;
-	
 
 	self.commenttext = comment.text;
-	
-	// CCLOG(@"Saving comment text: %@", self.commenttext);
 	
 	[self presentModalViewController:imagePicker animated:YES];
 }
@@ -218,6 +202,7 @@
 		
 		UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomPreview)];
 		[pickedImagePreview addGestureRecognizer:tap];
+		[tap release];
 		pickedImagePreview.userInteractionEnabled = YES;
 	}
 	

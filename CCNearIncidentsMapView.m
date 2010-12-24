@@ -14,29 +14,15 @@
 
 @synthesize location, displayedForRotation, postView;
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
 
 - (void)viewWillAppear:(BOOL)animated {
 	if (displayedForRotation) closeButton.hidden = YES;
 	else closeButton.hidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
 	MKCoordinateRegion region = MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(0.01, 0.01));
-	[mapView setRegion:region animated:NO];
+	[mapView setRegion:region animated:NO];	
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -44,43 +30,30 @@
 	return YES;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
 - (void)dealloc {
+	[postView release];
+	[location release];
+	[incidents release];
+	[reloadTimer release];
+	[updateThread release];
+	
     [super dealloc];
 }
 
 - (void)updateMap {
-//	NSMutableArray *anotations = [[NSMutableArray alloc] initWithArray:[mapView annotations]];
-//	[anotations remo:[mapView annotationsInMapRect:[mapView visibleMapRect]]];
-//	[mapView removeAnnotations:anotations];
-//	[anotations release];
-	
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[incidents release];
 	incidents = [CCIncident fetchIncidentsAround:mapView.region.center withLonDelta:mapView.region.span.longitudeDelta andLatDelta:mapView.region.span.latitudeDelta];
-	CCLOG(@"\n%@, Position: %f", incidents, mapView.region.center.latitude);
+	CCLOG(@"Got incidents: %@", incidents);
+	[mapView removeAnnotations:[mapView annotations]];
 	[mapView addAnnotations:incidents];
-//	[reloadTimer invalidate];
-//	[reloadTimer release];
-//	reloadTimer = nil;
+	[pool drain];
+	[pool release];
 }
 
 #pragma mark Interface Builder
 
 - (IBAction) closeMap {
-
 	[postView closeMapView];
 }
 
@@ -94,12 +67,19 @@
 #pragma mark MKMapViewDelegate
 
 - (void)mapView:(MKMapView *)mv regionDidChangeAnimated:(BOOL)animated {
-//	if (reloadTimer) {
-//		[reloadTimer invalidate];
-//		[reloadTimer release];
-//	}
-//	reloadTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(updateMap) userInfo:nil repeats:NO];
-	[self updateMap];
+	if (!updateThread || [updateThread isFinished]) {
+		[updateThread release];
+		updateThread = [[NSThread alloc] initWithTarget:self selector:@selector(updateMap) object:nil];
+	}
+	
+	if (reloadTimer) {
+		[reloadTimer invalidate];
+		[reloadTimer release];
+		reloadTimer = nil;
+	}
+
+	reloadTimer = [[NSTimer scheduledTimerWithTimeInterval:2 target:updateThread selector:@selector(start) userInfo:nil repeats:NO] retain];
+	
 }
 
 @end
