@@ -18,7 +18,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	//[comment becomeFirstResponder];
+	[comment becomeFirstResponder];
 	
 	locationManager = [[CLLocationManager alloc] init];
 	locationManager.delegate = self;
@@ -26,7 +26,6 @@
 	[locationManager startUpdatingLocation];
 
 	UIImageView *navbarimg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar"]];
-	
 	[navbar addSubview:navbarimg];
 	[navbar sendSubviewToBack:navbarimg];
 	

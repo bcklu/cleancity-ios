@@ -2,3 +2,7 @@
 "IMAGE_SOURCE_CANCEL" = "Cancel";
 "IMAGE_SOURCE_LIBRARY" = "Library";
 "IMAGE_SOURCE_CAMERA" = "Camera";
+
+"DAVE_TITLE" = "I'm sorry, Dave. I'm afraid I can't do that.";
+"DAVE_MESSAGE" = "We kinda really need you to log in to facebook.";
+"DAVE_OKAY" = "Ok";
