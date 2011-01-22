@@ -11,9 +11,11 @@
 #import "Facebook.h"
 
 @interface CCFacebookLoginView : UIViewController <FBSessionDelegate> {
+	IBOutlet UINavigationBar *navbar;
 
 }
 
 - (IBAction) login;
+- (IBAction) cancel;
 
 @end

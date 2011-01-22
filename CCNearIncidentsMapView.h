@@ -21,6 +21,7 @@
 	BOOL displayedForRotation;
 	NSArray *incidents;
 	NSTimer *reloadTimer;
+	NSThread *updateThread;
 }
 
 @property (readwrite, retain) CCPostView *postView;

@@ -68,6 +68,12 @@
 		F64CDD2412C27A2300901916 /* KeyboardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F64CDD2212C27A2300901916 /* KeyboardBack.png */; };
 		F64CDD2512C27A2300901916 /* KeyboardBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */; };
 		F64CDD3012C27DF200901916 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64CDD2F12C27DF200901916 /* navbar@2x.png */; };
+		F64D8E6E12D260FB00F72252 /* LoginWithFacebookNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8E6A12D260FB00F72252 /* LoginWithFacebookNormal.png */; };
+		F64D8E6F12D260FC00F72252 /* LoginWithFacebookNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8E6B12D260FB00F72252 /* LoginWithFacebookNormal@2x.png */; };
+		F64D8E7012D260FC00F72252 /* LoginWithFacebookPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8E6C12D260FB00F72252 /* LoginWithFacebookPressed.png */; };
+		F64D8E7112D260FC00F72252 /* LoginWithFacebookPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8E6D12D260FB00F72252 /* LoginWithFacebookPressed@2x.png */; };
+		F64D8EAC12D2654A00F72252 /* FacebookLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8EAA12D2654A00F72252 /* FacebookLogin.png */; };
+		F64D8EAD12D2654A00F72252 /* FacebookLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F64D8EAB12D2654A00F72252 /* FacebookLogin@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +179,12 @@
 		F64CDD2212C27A2300901916 /* KeyboardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardBack.png; sourceTree = "<group>"; };
 		F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KeyboardBack@2x.png"; sourceTree = "<group>"; };
 		F64CDD2F12C27DF200901916 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
+		F64D8E6A12D260FB00F72252 /* LoginWithFacebookNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginWithFacebookNormal.png; sourceTree = "<group>"; };
+		F64D8E6B12D260FB00F72252 /* LoginWithFacebookNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginWithFacebookNormal@2x.png"; sourceTree = "<group>"; };
+		F64D8E6C12D260FB00F72252 /* LoginWithFacebookPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginWithFacebookPressed.png; sourceTree = "<group>"; };
+		F64D8E6D12D260FB00F72252 /* LoginWithFacebookPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginWithFacebookPressed@2x.png"; sourceTree = "<group>"; };
+		F64D8EAA12D2654A00F72252 /* FacebookLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookLogin.png; sourceTree = "<group>"; };
+		F64D8EAB12D2654A00F72252 /* FacebookLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookLogin@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +404,12 @@
 		80B472DB12BE08FC00F86565 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F64D8E6A12D260FB00F72252 /* LoginWithFacebookNormal.png */,
+				F64D8E6B12D260FB00F72252 /* LoginWithFacebookNormal@2x.png */,
+				F64D8E6C12D260FB00F72252 /* LoginWithFacebookPressed.png */,
+				F64D8E6D12D260FB00F72252 /* LoginWithFacebookPressed@2x.png */,
+				F64D8EAA12D2654A00F72252 /* FacebookLogin.png */,
+				F64D8EAB12D2654A00F72252 /* FacebookLogin@2x.png */,
 				F64CDD2F12C27DF200901916 /* navbar@2x.png */,
 				F64CDD2212C27A2300901916 /* KeyboardBack.png */,
 				F64CDD2312C27A2300901916 /* KeyboardBack@2x.png */,
@@ -532,6 +550,12 @@
 				F64CDD2412C27A2300901916 /* KeyboardBack.png in Resources */,
 				F64CDD2512C27A2300901916 /* KeyboardBack@2x.png in Resources */,
 				F64CDD3012C27DF200901916 /* navbar@2x.png in Resources */,
+				F64D8E6E12D260FB00F72252 /* LoginWithFacebookNormal.png in Resources */,
+				F64D8E6F12D260FC00F72252 /* LoginWithFacebookNormal@2x.png in Resources */,
+				F64D8E7012D260FC00F72252 /* LoginWithFacebookPressed.png in Resources */,
+				F64D8E7112D260FC00F72252 /* LoginWithFacebookPressed@2x.png in Resources */,
+				F64D8EAC12D2654A00F72252 /* FacebookLogin.png in Resources */,
+				F64D8EAD12D2654A00F72252 /* FacebookLogin@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
