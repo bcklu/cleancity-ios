@@ -102,7 +102,8 @@
 		[request setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
 		[request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
 		[request setHTTPBody:requestData];
-		
+		[request setValue:@"iPhone" forHTTPHeaderField:@"User-Agent"];
+        
 		[self performSelectorInBackground:@selector(postIncidentWithRequest:) withObject:request];
 	}
 	else {
